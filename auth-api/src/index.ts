@@ -101,8 +101,16 @@ export default {
     // 🔓 LOGIN
     if (url.pathname === "/login" && method === "POST") {
       try {
-        const body = await request.json() as LoginBody;
+        let body: LoginBody;
 
+          try {
+            body = await request.json() as LoginBody;
+          } catch {
+            return new Response("Invalid JSON", {
+              status: 400,
+              headers: corsHeaders
+            });
+          }
         if (!body.email || !body.pass) {
           return new Response("Missing fields", {
             status: 400,
@@ -165,4 +173,6 @@ export default {
       headers: corsHeaders
     });
   }
+
+  
 };
