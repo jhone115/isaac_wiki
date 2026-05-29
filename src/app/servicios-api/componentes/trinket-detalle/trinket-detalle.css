@@ -1,0 +1,42 @@
+
+.trinket-detalle {
+
+  text-align: center;
+
+  padding: 1rem;
+
+}
+
+.trinket-icono {
+
+  width: 96px;
+
+  height: 96px;
+
+  image-rendering: pixelated;
+
+  margin-bottom: 1rem;
+
+}
+
+.descripcion {
+
+  margin-bottom: 1rem;
+
+  font-style: italic;
+
+}
+
+.trinket-info {
+
+  text-align: left;
+
+  margin-top: 1rem;
+
+}
+
+.trinket-info p {
+
+  margin: 0.5rem 0;
+
+}

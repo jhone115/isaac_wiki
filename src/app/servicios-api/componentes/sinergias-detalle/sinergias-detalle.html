@@ -1,0 +1,85 @@
+
+<div class="sinergia-detalle">
+
+  <h2>
+
+    {{ sinergia.nombre }}
+
+  </h2>
+
+  <p class="descripcion">
+
+    {{ sinergia.descripcion }}
+
+  </p>
+
+  <p>
+
+    <strong>Efecto:</strong>
+
+    {{ sinergia.efecto }}
+
+  </p>
+
+  <p>
+
+    <strong>Rareza:</strong>
+
+    {{ sinergia.rareza }}
+
+  </p>
+
+  <div class="objetos-container">
+
+    <h3>
+
+      Objetos requeridos
+
+    </h3>
+
+    <div
+      class="objetos-grid"
+    >
+
+      <div
+
+        *ngFor="
+          let objeto of
+          obtenerObjetosSinergia()
+        "
+
+        class="objeto-card"
+
+        (click)="
+          abrirObjeto.emit(objeto)
+        "
+
+      >
+
+        <img
+
+          [src]="
+            obtenerRutaIcono(objeto)
+          "
+
+          [alt]="
+            objeto.nombre
+          "
+
+          class="objeto-img"
+
+        >
+
+        <span>
+
+          {{ objeto.nombre }}
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

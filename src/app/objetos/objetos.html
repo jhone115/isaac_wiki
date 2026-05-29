@@ -1,0 +1,115 @@
+    <app-navegacion-items>
+</app-navegacion-items>
+<div class="contenedor">
+
+    <!-- TABLA -->
+
+    <div class="tabla-container">
+    
+        <div class="filtros">
+
+    <button
+        (click)="filtrarObjetos('todos')"
+    >
+        Todos
+    </button>
+
+    <button
+        (click)="filtrarObjetos('inicio')"
+    >
+        Disponibles desde el inicio
+    </button>
+
+    <button
+        (click)="filtrarObjetos('desbloqueables')"
+    >
+        Desbloqueables
+    </button>
+
+</div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Icono</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let obj of objetosFiltrado">
+
+                    <td>
+                        {{ obj.id }}
+                    </td>
+
+                    <td>
+
+                        <img
+                            [src]="obtenerRutaIcono(obj)"
+                            [alt]="obj.nombre"
+                            class="icono"
+                        >
+
+                    </td>
+
+                    <td
+                        (click)="seleccionarObjeto(obj)"
+                        class="clickable"
+                    >
+
+                        {{ obj.nombre }}
+
+                    </td>
+
+                    <td>
+
+                        {{ obj.descripcion }}
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- MODAL -->
+
+<div
+    class="modal-overlay"
+    *ngIf="objetoSeleccionado"
+    (click)="cerrarModal()"
+>
+
+    <div
+        class="modal-contenido"
+        (click)="$event.stopPropagation()"
+    >
+
+        <button
+            class="cerrar"
+            (click)="cerrarModal()"
+        >
+            ✕
+        </button>
+
+        <app-item-detalle
+            [objeto]="objetoSeleccionado">
+        </app-item-detalle>
+
+    </div>
+
+</div>

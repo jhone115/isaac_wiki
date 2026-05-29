@@ -1,0 +1,132 @@
+<div
+  class="contenedor"
+  *ngIf="!cargando"
+>
+
+  <!-- HEADER -->
+       <button
+      class="switch-btn"
+      (click)="cambiarVista()"
+    >
+
+      {{
+        esVistaBosses
+          ? 'Ver enemigos'
+          : 'Ver jefes'
+      }}
+
+    </button>
+<div class="wrapper">
+    <div class="header-enemigos">
+
+    <h1 class="titulo">
+
+      {{
+        esVistaBosses
+          ? 'Jefes'
+          : 'Enemigos'
+      }}
+
+    </h1>
+  </div>
+</div>
+
+<div class="wrapper">
+
+
+  <!-- LISTA -->
+
+  <div
+    class="lista-enemigos"
+  >
+
+    <div
+
+      class="enemigo-card"
+
+      *ngFor="
+        let enemigo
+        of enemigos
+      "
+
+      (click)="
+        abrirEnemigo(
+          enemigo
+        )
+      "
+
+    >
+
+      <!-- IMAGEN -->
+
+      <div
+        class="enemigo-imagen"
+      >
+
+        <img
+
+          [src]="
+            obtenerRutaIcono(
+              enemigo
+            )
+          "
+
+          [alt]="
+            enemigo.nombre
+          "
+
+        >
+
+      </div>
+
+      <!-- INFO -->
+
+      <div
+        class="enemigo-info"
+      >
+
+        <h2>
+
+          {{ enemigo.nombre }}
+
+        </h2>
+
+        <p>
+
+          {{ enemigo.descripcion }}
+
+        </p>
+
+      </div>
+
+      <!-- TIPO -->
+
+      <div
+
+        class="enemigo-tipo"
+
+        [class.boss]="
+          esVistaBosses
+        "
+
+      >
+
+        <span>
+
+          {{
+            esVistaBosses
+              ? 'Boss'
+              : 'Enemy'
+          }}
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+</div>

@@ -1,0 +1,353 @@
+[
+  {
+    "id": "Basement",
+    "nombre": "Basement",
+    "descripcioncorta": "El primer piso clásico de Isaac.",
+    "descripcion": "Basement es el primer entorno principal de The Binding of Isaac. Representa un sótano oscuro y húmedo lleno de criaturas deformes, excremento, arañas y moscas. Es el primer contacto del jugador con los enemigos básicos y las mecánicas esenciales del juego. Su ambiente es relativamente sencillo comparado con pisos posteriores, aunque aún puede contener salas secretas, maldiciones y campeones.",
+    "imagenHero": "assets/imagenes/pisos/Basement-bg.png",
+    "fondo": "assets/imagenes/pisos/Basement-bg.png",
+
+    "enemigos": [
+      "fly",
+      "spider",
+      "hopper",
+      "gaper",
+      "mulligan"
+    ],
+
+    "bosses": [
+      "monstro",
+      "duke of flies",
+      "larry jr",
+      "gemini"
+    ],
+
+    "caracteristicas": [
+      "Piso inicial",
+      "Enemigos básicos",
+      "Iluminación tenue",
+      "Habitaciones simples",
+      "Introducción a las mecánicas"
+    ]
+  },
+
+  {
+    "id": "Cellar",
+    "nombre": "Cellar",
+    "descripcioncorta": "Una variante infestada del Basement.",
+    "descripcion": "Cellar es una variante alternativa del Basement centrada en arañas y telarañas. Las habitaciones poseen una estética más deteriorada y orgánica, con mayor presencia de obstáculos y enemigos rápidos. Puede resultar más peligrosa para nuevos jugadores debido a la movilidad de sus enemigos.",
+    "imagenHero": "assets/imagenes/pisos/Cellar.png",
+    "fondo": "assets/imagenes/pisos/Cellar.png",
+
+    "enemigos": [
+      "spider",
+      "big spider",
+      "baby long legs",
+      "trite"
+    ],
+
+    "bosses": [
+      "widow",
+      "pin",
+      "the haunt"
+    ],
+
+    "caracteristicas": [
+      "Abundancia de arañas",
+      "Telarañas ralentizantes",
+      "Mayor dificultad inicial",
+      "Ambiente deteriorado"
+    ]
+  },
+
+  {
+    "id": "Burning Basement",
+    "nombre": "Burning Basement",
+    "descripcioncorta": "Una versión incendiada y peligrosa del Basement.",
+    "descripcion": "Burning Basement es una variante alternativa introducida en Afterbirth. El piso está cubierto de fuego, carbón y cenizas. Muchas habitaciones contienen fogatas activas y explosiones inesperadas, aumentando considerablemente el peligro incluso en etapas tempranas.",
+    "imagenHero": "assets/imagenes/pisos/Burning%20Basement.png",
+    "fondo": "assets/imagenes/pisos/Burning%20Basement.png",
+
+    "enemigos": [
+      "fire fly",
+      "gaper",
+      "burning hopper",
+      "flaming fatty"
+    ],
+
+    "bosses": [
+      "the forsaken",
+      "little horn",
+      "rag man"
+    ],
+
+    "caracteristicas": [
+      "Fuego constante",
+      "Ambiente rojizo",
+      "Mayor daño ambiental",
+      "Explosiones frecuentes"
+    ]
+  },
+
+  {
+    "id": "Downpour",
+    "nombre": "Downpour",
+    "descripcioncorta": "Una versión inundada y oscura del sótano.",
+    "descripcion": "Downpour es uno de los pisos alternativos añadidos en Repentance. El escenario está cubierto de agua y lluvia constante, creando reflejos y sonidos ambientales inquietantes. Introduce enemigos más agresivos y mecánicas relacionadas con charcos y electricidad.",
+    "imagenHero": "assets/imagenes/pisos/Downpour.png",
+    "fondo": "assets/imagenes/pisos/Downpour.png",
+
+    "enemigos": [
+      "pacer",
+      "drowned charger",
+      "tainted hopper",
+      "drip"
+    ],
+
+    "bosses": [
+      "rainmaker",
+      "baby plum",
+      "lil blub"
+    ],
+
+    "caracteristicas": [
+      "Lluvia constante",
+      "Ambiente húmedo",
+      "Reflejos en el suelo",
+      "Música ambiental inquietante",
+      "Acceso al camino alternativo"
+    ]
+  },
+
+  {
+    "id": "Mines",
+    "nombre": "Mines",
+    "descripcioncorta": "Una mina oscura llena de maquinaria y explosivos.",
+    "descripcion": "Mines reemplaza a las Catacombs en el camino alternativo de Repentance. El piso contiene raíles, explosivos, maquinaria minera y enemigos más resistentes. Muchas salas requieren movilidad y reflejos rápidos para evitar trampas y proyectiles.",
+    "imagenHero": "assets/imagenes/pisos/Mines.png",
+    "fondo": "assets/imagenes/pisos/Mines.png",
+
+    "enemigos": [
+      "minecart enemy",
+      "rock spider",
+      "quakey",
+      "mole"
+    ],
+
+    "bosses": [
+      "great gideon",
+      "reap creep",
+      "the shell"
+    ],
+
+    "caracteristicas": [
+      "Explosivos abundantes",
+      "Vagones mineros",
+      "Trampas peligrosas",
+      "Entorno industrial"
+    ]
+  },
+
+  {
+    "id": "Ashpit",
+    "nombre": "Ashpit",
+    "descripcioncorta": "Un piso abrasivo cubierto de ceniza y magma.",
+    "descripcion": "Ashpit es la variante alternativa de Mines. Está repleto de cenizas, humo y roca volcánica. Las habitaciones suelen contener fuego, agujeros y enemigos capaces de generar caos rápidamente. El ambiente es sofocante y hostil.",
+    "imagenHero": "assets/imagenes/pisos/Ashpit.png",
+    "fondo": "assets/imagenes/pisos/Ashpit.png",
+
+    "enemigos": [
+      "ash fly",
+      "ember hopper",
+      "magma crawler",
+      "coal spider"
+    ],
+
+    "bosses": [
+      "the pile",
+      "hornfel",
+      "clog"
+    ],
+
+    "caracteristicas": [
+      "Ceniza flotando",
+      "Fuego y magma",
+      "Escasa visibilidad",
+      "Entorno volcánico",
+      "Daño ambiental frecuente"
+    ]
+  },
+
+  {
+    "id": "Depths",
+    "nombre": "Depths",
+    "descripcioncorta": "Las profundidades oscuras debajo del sótano.",
+    "descripcion": "Depths representa una zona más profunda y peligrosa del hogar de Isaac. Introduce enemigos más rápidos y resistentes, además de patrones de ataque complejos. Aquí suele encontrarse la pelea contra Mom.",
+    "imagenHero": "assets/imagenes/pisos/Depths.png",
+    "fondo": "assets/imagenes/pisos/Depths.png",
+
+    "enemigos": [
+      "mask",
+      "heart",
+      "globin",
+      "walking host"
+    ],
+
+    "bosses": [
+      "mom",
+      "loki",
+      "blastocyst"
+    ],
+
+    "caracteristicas": [
+      "Oscuridad intensa",
+      "Mayor dificultad",
+      "Enemigos resistentes",
+      "Preparación para Mom"
+    ]
+  },
+
+  {
+    "id": "Womb",
+    "nombre": "Womb",
+    "descripcioncorta": "El interior orgánico y sangriento del útero.",
+    "descripcion": "Womb es uno de los pisos más icónicos de Isaac. Todo el entorno parece estar vivo, con paredes carnosas y sonidos orgánicos constantes. Los enemigos poseen gran cantidad de vida y daño elevado.",
+    "imagenHero": "assets/imagenes/pisos/Womb.png",
+    "fondo": "assets/imagenes/pisos/Womb.png",
+
+    "enemigos": [
+      "globin",
+      "walking boil",
+      "conjoined fatty",
+      "sucker"
+    ],
+
+    "bosses": [
+      "mom's heart",
+      "it lives"
+    ],
+
+    "caracteristicas": [
+      "Entorno orgánico",
+      "Música perturbadora",
+      "Enemigos resistentes",
+      "Alta dificultad"
+    ]
+  },
+
+  {
+    "id": "Corpse",
+    "nombre": "Corpse",
+    "descripcioncorta": "Un cadáver gigantesco lleno de mutaciones.",
+    "descripcion": "Corpse es el último piso del camino alternativo en Repentance. Posee un ambiente grotesco y extremadamente hostil, con enemigos mutados y escenarios llenos de fluidos y carne. Aquí ocurre la pelea contra Mother.",
+    "imagenHero": "assets/imagenes/pisos/Corpse.png",
+    "fondo": "assets/imagenes/pisos/Corpse.png",
+
+    "enemigos": [
+      "corpse eater",
+      "tumor",
+      "mutant spider",
+      "vis"
+    ],
+
+    "bosses": [
+      "mother",
+      "chimera",
+      "rotgut"
+    ],
+
+    "caracteristicas": [
+      "Diseño grotesco",
+      "Alta dificultad",
+      "Enemigos mutados",
+      "Camino alternativo final"
+    ]
+  },
+
+  {
+    "id": "Blue Womb",
+    "nombre": "Blue Womb",
+    "descripcioncorta": "El útero azul accesible solo en menos de 30 minutos.",
+    "descripcion": "Blue Womb, también conocido como ???, es un piso especial desbloqueado tras derrotar a Mom's Heart o It Lives un total de 10 veces. Solo puede accederse derrotando a It Lives en menos de 30 minutos, momento en el cual aparece una gran puerta azul en la sala del jefe. Este piso posee una apariencia fría y azulada, distinta al Womb normal, con enemigos exclusivos potenciados y una atmósfera silenciosa y opresiva.\n\nEl mapa siempre contiene dos salas de tesoro y una tienda especial antes del combate principal. La tienda utiliza monedas normales y permite prepararse para la batalla final contra Hush. Al derrotar a Hush por primera vez se desbloquea el Final 17 y múltiples contenidos adicionales como pisos alternativos y nuevos caminos.\n\nBlue Womb es considerado uno de los mayores puntos de dificultad intermedia del juego debido a la enorme cantidad de proyectiles, enemigos resistentes y al combate contra Hush, uno de los jefes más largos y exigentes de The Binding of Isaac.",
+    "imagenHero": "assets/imagenes/pisos/Blue%20Womb.png",
+    "fondo": "assets/imagenes/pisos/Blue%20Womb.png",
+
+    "enemigos": [
+      "hush fly",
+      "blue gaper",
+      "blue boil",
+      "blue conjoined fatty",
+      "hush spider",
+      "blue clotty"
+    ],
+
+    "bosses": [
+      "hush"
+    ],
+
+    "caracteristicas": [
+      "Acceso por tiempo limitado",
+      "2 salas de tesoro",
+      "Tienda especial previa al jefe",
+      "Útero azul",
+      "Enemigos únicos",
+      "Combate contra Hush",
+      "Gran cantidad de proyectiles",
+      "Desbloquea contenido adicional"
+    ]
+  },
+
+  {
+    "id": "Sheol",
+    "nombre": "Sheol",
+    "descripcioncorta": "El reino infernal bajo el Womb.",
+    "descripcion": "Sheol es una dimensión infernal llena de fuego, demonios y criaturas grotescas. El piso posee una ambientación oscura con lava y roca negra. Al final espera Satan, uno de los jefes principales del juego.",
+    "imagenHero": "assets/imagenes/pisos/Sheol.png",
+    "fondo": "assets/imagenes/pisos/Sheol.png",
+
+    "enemigos": [
+      "night crawler",
+      "evil twin",
+      "host",
+      "leech"
+    ],
+
+    "bosses": [
+      "satan"
+    ],
+
+    "caracteristicas": [
+      "Ambiente infernal",
+      "Fuego y lava",
+      "Alta dificultad",
+      "Final clásico"
+    ]
+  },
+
+  {
+    "id": "Cathedral",
+    "nombre": "Cathedral",
+    "descripcioncorta": "La catedral luminosa sobre Sheol.",
+    "descripcion": "Cathedral es un piso brillante y silencioso lleno de ángeles y enemigos celestiales. Contrasta completamente con Sheol tanto visual como musicalmente. Aquí se enfrenta Isaac.",
+    "imagenHero": "assets/imagenes/pisos/Cathedral.png",
+    "fondo": "assets/imagenes/pisos/Cathedral.png",
+
+    "enemigos": [
+      "angel fetus",
+      "holy host",
+      "floating knight",
+      "eternal fly"
+    ],
+
+    "bosses": [
+      "isaac"
+    ],
+
+    "caracteristicas": [
+      "Ambiente celestial",
+      "Música tranquila",
+      "Enemigos angelicales",
+      "Iluminación blanca"
+    ]
+  }
+]

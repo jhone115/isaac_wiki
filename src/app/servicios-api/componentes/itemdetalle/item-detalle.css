@@ -1,0 +1,86 @@
+.detalle{
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.header-detalle{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.icono-grande{
+    width: 72px;
+    height: 72px;
+    image-rendering: pixelated;
+}
+
+.tipo{
+    display: inline-block;
+    padding: 4px 8px;
+    background: #333;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.bloque{
+    margin-top: 20px;
+}
+
+.stat{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+.pools{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pool{
+    background: #222;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.detalle {
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(20,20,20,0.96),
+            rgba(10,10,10,0.96)
+        );
+
+    border: 2px solid #3b2f28;
+
+    box-shadow:
+        0 0 25px rgba(0,0,0,0.7);
+
+}
+
+/* SCROLLBAR */
+
+.modal-contenido::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+.modal-contenido::-webkit-scrollbar-track {
+
+    background: #111;
+
+}
+
+.modal-contenido::-webkit-scrollbar-thumb {
+
+    background: #4a3a30;
+
+    border-radius: 10px;
+
+}

@@ -1,0 +1,54 @@
+.nav-items {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+
+  flex-wrap: wrap;
+
+}
+
+.nav-items a {
+
+  text-decoration: none;
+
+  color: #2d1b10;
+
+  background:
+    url('/assets/paper-m.png');
+
+  background-size: cover;
+
+  padding:
+    12px 20px;
+
+  font-weight: bold;
+
+  border-radius: 8px;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.4);
+
+}
+
+.nav-items a:hover {
+
+  transform: scale(1.05);
+
+}
+
+.nav-items a.activo {
+
+  filter: brightness(0.8);
+
+  transform: scale(0.97);
+
+}

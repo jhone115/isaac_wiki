@@ -1,0 +1,74 @@
+
+<div class="trinket-detalle">
+
+  <img
+    [src]="obtenerRutaIcono(trinket)"
+    [alt]="trinket.nombre"
+    class="trinket-icono"
+  >
+
+  <h2>
+
+    {{ trinket.nombre }}
+
+  </h2>
+
+  <p class="descripcion">
+
+    {{ trinket.descripcion }}
+
+  </p>
+
+  <div class="trinket-info">
+
+    <p>
+
+      <strong>Efecto:</strong>
+
+      {{ trinket.efecto }}
+
+    </p>
+
+    <p>
+
+      <strong>Unlock:</strong>
+
+      {{ trinket.unlock }}
+
+    </p>
+
+    <p *ngIf="trinket.tipo">
+
+      <strong>Tipo:</strong>
+
+      {{ trinket.tipo }}
+
+    </p>
+
+    <p *ngIf="trinket.rareza">
+
+      <strong>Rareza:</strong>
+
+      {{ trinket.rareza }}
+
+    </p>
+
+    <p>
+
+      <strong>Stackeable:</strong>
+
+      {{
+
+        trinket.stackeable
+
+          ? 'Sí'
+
+          : 'No'
+
+      }}
+
+    </p>
+
+  </div>
+
+</div>

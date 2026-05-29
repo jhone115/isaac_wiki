@@ -1,0 +1,299 @@
+{
+  "pickups": [
+
+    {
+      "id": 1,
+      "clave": "penny",
+      "nombre": "Penny",
+      "descripcion": "Moneda básica de 1 centavo.",
+      "tipo": "Moneda",
+      "efecto": "+1 coin",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Rooms", "Shop"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 2,
+      "clave": "nickel",
+      "nombre": "Nickel",
+      "descripcion": "Moneda de 5 centavos.",
+      "tipo": "Moneda",
+      "efecto": "+5 coins",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Rooms", "Shop"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 3,
+      "clave": "dime",
+      "nombre": "Dime",
+      "descripcion": "Moneda de 10 centavos.",
+      "tipo": "Moneda",
+      "efecto": "+10 coins",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Rooms", "Shop"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 4,
+      "clave": "lucky penny",
+      "nombre": "Lucky Penny",
+      "descripcion": "Otorga suerte temporal.",
+      "tipo": "Moneda",
+      "efecto": "+1 coin y luck up temporal",
+      "unlock": "Derrota a The Lamb con Keeper",
+      "pools": ["Rooms"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 5,
+      "clave": "sticky nickel",
+      "nombre": "Sticky Nickel",
+      "descripcion": "Moneda pegajosa difícil de recoger.",
+      "tipo": "Moneda",
+      "efecto": "+5 coins",
+      "unlock": "Derrota a Delirium con Keeper",
+      "pools": ["Rooms"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 6,
+      "clave": "golden penny",
+      "nombre": "Golden Penny",
+      "descripcion": "Puede duplicarse al recogerla.",
+      "tipo": "Moneda",
+      "efecto": "Duplica monedas",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Rooms", "Shop"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 7,
+      "clave": "corazon rojo",
+      "nombre": "Red Heart",
+      "descripcion": "Restaura un corazón rojo.",
+      "tipo": "Corazón",
+      "efecto": "Heal",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Rooms"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 8,
+      "clave": "medio corazon rojo",
+      "nombre": "Half Red Heart",
+      "descripcion": "Restaura medio corazón rojo.",
+      "tipo": "Corazón",
+      "efecto": "Half Heal",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Rooms"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 9,
+      "clave": "corazon azul",
+      "nombre": "Soul Heart",
+      "descripcion": "Otorga protección temporal.",
+      "tipo": "Corazón",
+      "efecto": "+1 Soul Heart",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Rooms", "Angel Room"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 10,
+      "clave": "corazon negro",
+      "nombre": "Black Heart",
+      "descripcion": "Explota al perderse completamente.",
+      "tipo": "Corazón",
+      "efecto": "Necronomicon effect",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Devil Room", "Curse Room"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 11,
+      "clave": "corazon eterno",
+      "nombre": "Eternal Heart",
+      "descripcion": "Otorga un contenedor al terminar el piso.",
+      "tipo": "Corazón",
+      "efecto": "+1 Heart Container",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Angel Room"],
+      "stackeable": false,
+      "consumible": true,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 12,
+      "clave": "corazon dorado",
+      "nombre": "Golden Heart",
+      "descripcion": "Genera monedas al recibir daño.",
+      "tipo": "Corazón",
+      "efecto": "Coin burst",
+      "unlock": "Derrota a The Beast con Magdalene",
+      "pools": ["Rooms"],
+      "stackeable": false,
+      "consumible": true,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 13,
+      "clave": "corazon hueso",
+      "nombre": "Bone Heart",
+      "descripcion": "Protege contenedores internos.",
+      "tipo": "Corazón",
+      "efecto": "Special health",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Secret Room"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 14,
+      "clave": "key",
+      "nombre": "Key",
+      "descripcion": "Abre cofres y puertas.",
+      "tipo": "Llave",
+      "efecto": "+1 key",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Rooms", "Shop"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 15,
+      "clave": "golden key",
+      "nombre": "Golden Key",
+      "descripcion": "Llaves infinitas por el piso actual.",
+      "tipo": "Llave",
+      "efecto": "Infinite keys",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Secret Room"],
+      "stackeable": false,
+      "consumible": true,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 16,
+      "clave": "bomba",
+      "nombre": "Bomb",
+      "descripcion": "Explosivo estándar.",
+      "tipo": "Bomba",
+      "efecto": "+1 bomb",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Rooms", "Shop"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 17,
+      "clave": "golden bomb",
+      "nombre": "Golden Bomb",
+      "descripcion": "Bombas infinitas por el piso.",
+      "tipo": "Bomba",
+      "efecto": "Infinite bombs",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Secret Room"],
+      "stackeable": false,
+      "consumible": true,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 18,
+      "clave": "micro battery",
+      "nombre": "Micro Battery",
+      "descripcion": "Recarga pequeña para objetos activos.",
+      "tipo": "Batería",
+      "efecto": "+2 charges",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Shop"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 19,
+      "clave": "mega battery",
+      "nombre": "Mega Battery",
+      "descripcion": "Permite sobrecargar objetos activos.",
+      "tipo": "Batería",
+      "efecto": "Overcharge",
+      "unlock": "Derrota a Ultra Greed",
+      "pools": ["Shop"],
+      "stackeable": true,
+      "consumible": true,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 20,
+      "clave": "fool",
+      "nombre": "The Fool",
+      "descripcion": "Teletransporta al inicio del piso.",
+      "tipo": "Carta",
+      "efecto": "Teleport",
+      "unlock": "Disponible desde el inicio",
+      "pools": ["Rooms"],
+      "stackeable": false,
+      "consumible": true,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 21,
+      "clave": "runa",
+      "nombre": "Hagalaz",
+      "descripcion": "Destruye obstáculos de la sala.",
+      "tipo": "Runa",
+      "efecto": "Room destruction",
+      "unlock": "Derrota a Mom's Heart con Lazarus",
+      "pools": ["Rooms"],
+      "stackeable": false,
+      "consumible": true,
+      "rareza": "Poco común"
+    }
+
+  ]
+}

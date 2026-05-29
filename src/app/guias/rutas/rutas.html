@@ -1,0 +1,187 @@
+<div
+  class="loading"
+  *ngIf="cargando"
+>
+
+  Cargando rutas...
+
+</div>
+
+<div
+  class="rutas-container"
+
+  *ngIf="!cargando"
+>
+
+  <!-- HERO -->
+
+  <section
+    class="hero-rutas"
+  >
+
+    <div
+      class="hero-overlay"
+    >
+
+      <h1>
+        RUTAS
+      </h1>
+
+      <p>
+
+        Explora los distintos caminos
+        de The Binding of Isaac,
+        desde rutas clásicas hasta
+        rutas alternativas de
+        Repentance.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- INFO -->
+
+  <section
+    class="info-rutas"
+  >
+
+    <h2>
+      ¿Qué son las rutas?
+    </h2>
+
+    <p>
+
+      Las rutas determinan
+      qué pisos, bosses
+      y finales puedes alcanzar.
+
+      Algunas requieren objetos,
+      llaves especiales o derrotar
+      ciertos jefes previamente.
+
+    </p>
+
+  </section>
+
+  <!-- GRID -->
+
+  <section
+    class="rutas-grid"
+  >
+
+    <div
+
+      class="ruta-card"
+
+      *ngFor="
+        let ruta
+        of rutas
+      "
+
+      (click)="
+        abrirRuta(
+          ruta
+        )
+      "
+    >
+
+      <!-- IMAGEN -->
+
+      <div
+        class="ruta-imagen"
+      >
+
+        <img
+
+          [src]="
+            'assets/imagenes/' +
+            ruta.imagen
+          "
+
+          [alt]="
+            ruta.nombre
+          "
+
+        >
+
+      </div>
+
+      <!-- INFO -->
+
+      <div
+        class="ruta-info"
+      >
+
+        <h2>
+
+          {{ ruta.nombre }}
+
+        </h2>
+
+        <p>
+
+          {{ ruta.descripcion }}
+
+        </p>
+
+      </div>
+
+      <!-- PISOS -->
+
+      <div
+        class="ruta-pisos"
+      >
+
+        <span
+
+          *ngFor="
+            let piso
+            of ruta.pisos
+          "
+
+        >
+
+          {{ piso }}
+
+        </span>
+
+      </div>
+
+      <!-- FINALES -->
+
+      <div
+        class="ruta-finales"
+      >
+
+        <h3>
+          Finales
+        </h3>
+
+        <div
+          class="final-tags"
+        >
+
+          <span
+
+            *ngFor="
+              let final
+              of ruta.finales
+            "
+
+          >
+
+            {{ final }}
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

@@ -1,0 +1,715 @@
+{
+  "bosses": [
+    {
+      "id": "monstro",
+      "nombre": "Monstro",
+      "descripcion": "Jefe temprano del Basement. Salta hacia Isaac y dispara lágrimas dispersas.",
+      "tipo": "Boss",
+      "pisos": [
+        "Basement",
+        "Burning Basement"
+      ],
+      "ataques": [
+        "Salto hacia el jugador",
+        "Disparo de lágrimas",
+        "Salto con caída"
+      ],
+      "dificultad": "Media",
+      "tags": [
+        "jumping",
+        "projectiles",
+        "early_game"
+      ],
+      "variantes": [
+        {
+          "id": "monstro_ii",
+          "nombre": "Monstro II"
+        }
+      ]
+    },
+
+    {
+      "id": "monstro_ii",
+      "nombre": "Monstro II",
+      "descripcion": "Versión más agresiva de Monstro con ataques más rápidos y patrones más densos.",
+      "tipo": "Boss Variant",
+      "boss_base": {
+        "id": "monstro",
+        "nombre": "Monstro"
+      },
+      "pisos": [
+        "Basement",
+        "Depths"
+      ],
+      "ataques": [
+        "Saltos rápidos",
+        "Lágrimas en ráfaga",
+        "Carga aérea"
+      ],
+      "dificultad": "Media-Alta",
+      "tags": [
+        "aggressive",
+        "jumping",
+        "burst_tears"
+      ],
+      "variantes": [
+        {
+          "id": "monstro",
+          "nombre": "Monstro"
+        }
+      ]
+    },
+
+    {
+      "id": "ultra_greed",
+      "nombre": "Ultra Greed",
+      "descripcion": "Jefe de Greed Mode que usa monedas y máquinas como ataques.",
+      "tipo": "Boss",
+      "pisos": [
+        "Greed Mode"
+      ],
+      "ataques": [
+        "Monedas explosivas",
+        "Golpes",
+        "Oleadas"
+      ],
+      "dificultad": "Alta",
+      "tags": [
+        "greed_mode",
+        "coins",
+        "arena"
+      ],
+      "variantes": [
+        {
+          "id": "ultra_greedier",
+          "nombre": "Ultra Greedier"
+        }
+      ]
+    },
+
+    {
+      "id": "ultra_greedier",
+      "nombre": "Ultra Greedier",
+      "descripcion": "Versión más difícil de Ultra Greed con ataques más rápidos.",
+      "tipo": "Boss Variant",
+      "boss_base": {
+        "id": "ultra_greed",
+        "nombre": "Ultra Greed"
+      },
+      "pisos": [
+        "Greedier Mode"
+      ],
+      "ataques": [
+        "Spam de monedas",
+        "Ataques rápidos",
+        "Fase extendida"
+      ],
+      "dificultad": "Extrema",
+      "tags": [
+        "greed_mode",
+        "hard_mode",
+        "coins"
+      ],
+      "variantes": [
+        {
+          "id": "ultra_greed",
+          "nombre": "Ultra Greed"
+        }
+      ]
+    },
+{
+      "id": "duke_of_flies",
+      "nombre": "Duke of Flies",
+      "descripcion": "Jefe volador que invoca múltiples moscas para atacar a Isaac.",
+      "tipo": "Boss",
+      "pisos": [
+        "Basement",
+        "Cellar"
+      ],
+      "ataques": [
+        "Invocar moscas",
+        "Movimiento aéreo",
+        "Persecución"
+      ],
+      "dificultad": "Baja",
+      "tags": [
+        "flying",
+        "summoner",
+        "early_game"
+      ],
+      "variantes": []
+    },
+
+    {
+      "id": "gemini",
+      "nombre": "Gemini",
+      "descripcion": "Boss doble unido por un cordón umbilical. Una parte persigue agresivamente a Isaac.",
+      "tipo": "Boss",
+      "pisos": [
+        "Basement",
+        "Cellar"
+      ],
+      "ataques": [
+        "Carga agresiva",
+        "Persecución",
+        "Separación parcial"
+      ],
+      "dificultad": "Media",
+      "tags": [
+        "dual",
+        "charge",
+        "aggressive"
+      ],
+      "variantes": []
+    },
+
+    {
+      "id": "famine",
+      "nombre": "Famine",
+      "descripcion": "Uno de los Cuatro Jinetes. Usa cargas rápidas y proyectiles.",
+      "tipo": "Boss",
+      "pisos": [
+        "Basement",
+        "Caves"
+      ],
+      "ataques": [
+        "Carga",
+        "Disparo de lágrimas",
+        "Invocar moscas"
+      ],
+      "dificultad": "Media",
+      "tags": [
+        "horseman",
+        "charge",
+        "projectiles"
+      ],
+      "variantes": [
+        {
+          "id": "pestilence",
+          "nombre": "Pestilence"
+        },
+        {
+          "id": "war",
+          "nombre": "War"
+        },
+        {
+          "id": "death",
+          "nombre": "Death"
+        }
+      ]
+    },
+
+    {
+      "id": "pestilence",
+      "nombre": "Pestilence",
+      "descripcion": "Jinete que deja creep venenoso y usa bombas explosivas.",
+      "tipo": "Boss Variant",
+      "boss_base": {
+        "id": "famine",
+        "nombre": "Famine"
+      },
+      "pisos": [
+        "Caves",
+        "Depths"
+      ],
+      "ataques": [
+        "Bombas",
+        "Creep venenoso",
+        "Carga"
+      ],
+      "dificultad": "Media",
+      "tags": [
+        "horseman",
+        "poison",
+        "explosive"
+      ],
+      "variantes": [
+        {
+          "id": "famine",
+          "nombre": "Famine"
+        },
+        {
+          "id": "war",
+          "nombre": "War"
+        }
+      ]
+    },
+
+    {
+      "id": "war",
+      "nombre": "War",
+      "descripcion": "Jinete agresivo que realiza cargas explosivas.",
+      "tipo": "Boss Variant",
+      "boss_base": {
+        "id": "famine",
+        "nombre": "Famine"
+      },
+      "pisos": [
+        "Depths",
+        "Womb"
+      ],
+      "ataques": [
+        "Cargas explosivas",
+        "Invocación",
+        "Movimiento rápido"
+      ],
+      "dificultad": "Alta",
+      "tags": [
+        "horseman",
+        "explosive",
+        "aggressive"
+      ],
+      "variantes": [
+        {
+          "id": "death",
+          "nombre": "Death"
+        }
+      ]
+    },
+
+    {
+      "id": "death",
+      "nombre": "Death",
+      "descripcion": "Jinete final con ataques rápidos y hoces giratorias.",
+      "tipo": "Boss Variant",
+      "boss_base": {
+        "id": "famine",
+        "nombre": "Famine"
+      },
+      "pisos": [
+        "Womb",
+        "Utero"
+      ],
+      "ataques": [
+        "Hoces",
+        "Carga",
+        "Patrones rápidos"
+      ],
+      "dificultad": "Alta",
+      "tags": [
+        "horseman",
+        "scythes",
+        "late_game"
+      ],
+      "variantes": []
+    },
+
+    {
+      "id": "the_bloat",
+      "nombre": "The Bloat",
+      "descripcion": "Versión enorme y peligrosa de Peep con láseres desde los ojos.",
+      "tipo": "Boss",
+      "pisos": [
+        "Depths",
+        "Necropolis"
+      ],
+      "ataques": [
+        "Láseres brimstone",
+        "Saltos",
+        "Disparo ocular"
+      ],
+      "dificultad": "Alta",
+      "tags": [
+        "laser",
+        "jumping",
+        "rage_inducing"
+      ],
+      "variantes": [
+        {
+          "id": "peep",
+          "nombre": "Peep"
+        }
+      ]
+    },
+
+    {
+      "id": "peep",
+      "nombre": "Peep",
+      "descripcion": "Boss que deja ojos móviles y creep dañino.",
+      "tipo": "Boss",
+      "pisos": [
+        "Depths"
+      ],
+      "ataques": [
+        "Ojos desprendibles",
+        "Creep",
+        "Saltos"
+      ],
+      "dificultad": "Media",
+      "tags": [
+        "eyes",
+        "creep",
+        "jumping"
+      ],
+      "variantes": [
+        {
+          "id": "the_bloat",
+          "nombre": "The Bloat"
+        }
+      ]
+    }
+  ],
+
+
+  "enemigos": [
+    {
+      "id": "fly",
+      "nombre": "Fly",
+      "descripcion": "Enemigo volador básico que persigue directamente a Isaac.",
+      "tipo": "Enemy",
+      "pisos": [
+        "Basement",
+        "Cellar",
+        "Caves"
+      ],
+      "ataques": [
+        "Contacto directo",
+        "Persecución aérea"
+      ],
+      "tags": [
+        "flying",
+        "contact_damage",
+        "early_game"
+      ],
+      "variantes": [
+        {
+          "id": "attack_fly",
+          "nombre": "Attack Fly"
+        },
+        {
+          "id": "red_fly",
+          "nombre": "Red Fly"
+        },
+        {
+          "id": "dart_fly",
+          "nombre": "Dart Fly"
+        }
+      ]
+    },
+
+    {
+      "id": "attack_fly",
+      "nombre": "Attack Fly",
+      "descripcion": "Mosca agresiva que orbita antes de lanzarse hacia Isaac.",
+      "tipo": "Enemy Variant",
+      "enemigo_base": {
+        "id": "fly",
+        "nombre": "Fly"
+      },
+      "pisos": [
+        "Basement",
+        "Cellar",
+        "Caves"
+      ],
+      "ataques": [
+        "Carga rápida",
+        "Movimiento orbital"
+      ],
+      "tags": [
+        "flying",
+        "aggressive",
+        "charge"
+      ],
+      "variantes": [
+        {
+          "id": "fly",
+          "nombre": "Fly"
+        },
+        {
+          "id": "red_fly",
+          "nombre": "Red Fly"
+        }
+      ]
+    },
+
+    {
+      "id": "spider",
+      "nombre": "Spider",
+      "descripcion": "Araña pequeña que se mueve de forma errática y veloz.",
+      "tipo": "Enemy",
+      "pisos": [
+        "Basement",
+        "Cellar",
+        "Caves"
+      ],
+      "ataques": [
+        "Movimiento impredecible",
+        "Contacto directo"
+      ],
+      "tags": [
+        "ground",
+        "fast",
+        "erratic"
+      ],
+      "variantes": [
+        {
+          "id": "big_spider",
+          "nombre": "Big Spider"
+        },
+        {
+          "id": "wall_spider",
+          "nombre": "Wall Spider"
+        }
+      ]
+    },
+
+    {
+      "id": "big_spider",
+      "nombre": "Big Spider",
+      "descripcion": "Araña más resistente que puede invocar arañas pequeñas.",
+      "tipo": "Enemy Variant",
+      "enemigo_base": {
+        "id": "spider",
+        "nombre": "Spider"
+      },
+      "pisos": [
+        "Caves",
+        "Catacombs"
+      ],
+      "ataques": [
+        "Invocar arañas",
+        "Carga",
+        "Contacto directo"
+      ],
+      "tags": [
+        "summoner",
+        "spider",
+        "tank"
+      ],
+      "variantes": [
+        {
+          "id": "spider",
+          "nombre": "Spider"
+        }
+      ]
+    },
+ {
+      "id": "red_fly",
+      "nombre": "Red Fly",
+      "descripcion": "Mosca roja más rápida y agresiva que Fly.",
+      "tipo": "Enemy Variant",
+      "enemigo_base": {
+        "id": "fly",
+        "nombre": "Fly"
+      },
+      "pisos": [
+        "Basement",
+        "Burning Basement"
+      ],
+      "ataques": [
+        "Carga rápida",
+        "Persecución aérea"
+      ],
+      "tags": [
+        "flying",
+        "fast",
+        "aggressive"
+      ],
+      "variantes": [
+        {
+          "id": "fly",
+          "nombre": "Fly"
+        }
+      ]
+    },
+
+    {
+      "id": "dart_fly",
+      "nombre": "Dart Fly",
+      "descripcion": "Mosca que se mueve rápidamente en líneas rectas.",
+      "tipo": "Enemy Variant",
+      "enemigo_base": {
+        "id": "fly",
+        "nombre": "Fly"
+      },
+      "pisos": [
+        "Caves",
+        "Mines"
+      ],
+      "ataques": [
+        "Movimiento veloz",
+        "Embestida"
+      ],
+      "tags": [
+        "flying",
+        "dash",
+        "fast"
+      ],
+      "variantes": [
+        {
+          "id": "fly",
+          "nombre": "Fly"
+        }
+      ]
+    },
+
+    {
+      "id": "globin",
+      "nombre": "Globin",
+      "descripcion": "Criatura que emerge del suelo para perseguir a Isaac.",
+      "tipo": "Enemy",
+      "pisos": [
+        "Caves",
+        "Catacombs"
+      ],
+      "ataques": [
+        "Emboscada",
+        "Persecución",
+        "Emerger del suelo"
+      ],
+      "tags": [
+        "underground",
+        "ambush",
+        "ground"
+      ],
+      "variantes": [
+        {
+          "id": "gaping_maw",
+          "nombre": "Gaping Maw"
+        }
+      ]
+    },
+
+    {
+      "id": "gaping_maw",
+      "nombre": "Gaping Maw",
+      "descripcion": "Versión inmóvil que ataca cuando Isaac se acerca.",
+      "tipo": "Enemy Variant",
+      "enemigo_base": {
+        "id": "globin",
+        "nombre": "Globin"
+      },
+      "pisos": [
+        "Depths",
+        "Necropolis"
+      ],
+      "ataques": [
+        "Mordida",
+        "Ataque sorpresa"
+      ],
+      "tags": [
+        "trap",
+        "stationary",
+        "ambush"
+      ],
+      "variantes": [
+        {
+          "id": "globin",
+          "nombre": "Globin"
+        }
+      ]
+    },
+
+    {
+      "id": "host",
+      "nombre": "Host",
+      "descripcion": "Enemigo óseo que se protege dentro de un caparazón.",
+      "tipo": "Enemy",
+      "pisos": [
+        "Depths",
+        "Necropolis"
+      ],
+      "ataques": [
+        "Disparo de lágrimas",
+        "Defensa temporal"
+      ],
+      "tags": [
+        "armored",
+        "skeleton",
+        "projectiles"
+      ],
+      "variantes": [
+        {
+          "id": "mobile_host",
+          "nombre": "Mobile Host"
+        }
+      ]
+    },
+
+    {
+      "id": "mobile_host",
+      "nombre": "Mobile Host",
+      "descripcion": "Versión móvil de Host que persigue lentamente a Isaac.",
+      "tipo": "Enemy Variant",
+      "enemigo_base": {
+        "id": "host",
+        "nombre": "Host"
+      },
+      "pisos": [
+        "Womb",
+        "Scarred Womb"
+      ],
+      "ataques": [
+        "Movimiento lento",
+        "Disparo protegido"
+      ],
+      "tags": [
+        "armored",
+        "mobile",
+        "defensive"
+      ],
+      "variantes": [
+        {
+          "id": "host",
+          "nombre": "Host"
+        }
+      ]
+    },
+
+    {
+      "id": "charger",
+      "nombre": "Charger",
+      "descripcion": "Enemigo que se detiene brevemente antes de embestir.",
+      "tipo": "Enemy",
+      "pisos": [
+        "Caves",
+        "Depths"
+      ],
+      "ataques": [
+        "Carga veloz",
+        "Contacto directo"
+      ],
+      "tags": [
+        "charge",
+        "fast",
+        "ground"
+      ],
+      "variantes": [
+        {
+          "id": "rage_creep",
+          "nombre": "Rage Creep"
+        }
+      ]
+    },
+
+    {
+      "id": "rage_creep",
+      "nombre": "Rage Creep",
+      "descripcion": "Versión más agresiva de Charger con movimiento errático.",
+      "tipo": "Enemy Variant",
+      "enemigo_base": {
+        "id": "charger",
+        "nombre": "Charger"
+      },
+      "pisos": [
+        "Womb",
+        "Corpse"
+      ],
+      "ataques": [
+        "Carga rápida",
+        "Movimiento impredecible"
+      ],
+      "tags": [
+        "rage",
+        "charge",
+        "aggressive"
+      ],
+      "variantes": [
+        {
+          "id": "charger",
+          "nombre": "Charger"
+        }
+      ]
+    }
+  ]
+}

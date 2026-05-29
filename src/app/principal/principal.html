@@ -1,0 +1,163 @@
+<div class="wrapper">
+<div class="indice">
+    <ul>
+  <li>
+    <a href="#home">Home</a>
+
+    <ul>
+      <li><a href="#home">Wiki</a></li>
+      <li><a href="#home">The Binding of Isaac</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="#secciones">Secciones</a>
+
+    <ul>
+      <li>
+        <a routerLink="/personajes">Personajes</a>
+
+        <ul>
+          <li>
+            <a href="#ruleta">Ruleta de personajes</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a routerLink="/objetos">Objetos</a>
+
+        <ul>
+          <li><a href="#base">Base - desbloqueables</a></li>
+          <li><a href="#pickups">Pick Ups</a></li>
+          <li><a href="#sinergias">Sinergias</a></li>
+          <li><a href="#trinkets">Trinkets</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a routerLink="/enemigos">Enemigos</a>
+
+        <ul>
+          <li><a href="#jefes">Jefes</a></li>
+          <li><a href="#especiales">Especiales</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a routerLink="/pisos">Pisos</a>
+
+        <ul>
+          <li><a href="#normales">Normales</a></li>
+          <li><a href="#alternos">Alternos</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#guias">Guías</a>
+
+        <ul>
+          <li><a href="#desbloqueables">Desbloqueables</a></li>
+          <li><a href="#rutas">Rutas</a></li>
+          <li><a href="#finales">Finales</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  </div> 
+  <div class="texto">
+    <main id="Inicio">
+      <h1><b>The Isaac Of Wiki</b></h1>
+      <p>
+        The Binding of Isaac: Rebirth es un roguelike de acción con niveles generados aleatoriamente donde Isaac intenta escapar de su madre mientras enfrenta enemigos, descubre secretos y derrota jefes.
+        Durante la partida puede encontrar objetos que cambian sus habilidades y apariencia.
+      </p>
+      <p>
+        Es el remake de The Binding of Isaac e incluye expansiones como Afterbirth, Afterbirth+ y Repentance.
+      </p>
+    </main>
+  </div>
+
+  <div class="imagen">
+    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/12/mixcollage-11-dec-2024-04-03-pm-5313.jpg">
+    <p>The Binding Of Isaac (TBOI) 2011</p>
+  </div>
+</div>
+<div class="wrapper">
+<p>secciones</p>
+</div>
+<app-ruleta #ruleta id="ruleta"></app-ruleta>
+
+<div class="wrapper" id="secciones">
+  <div class="menu-grid">
+    <button 
+      *ngFor="let section of sections" 
+      class="menu-item"
+      [attr.aria-label]="section.label"
+      (click)="navigateTo(section)">
+
+      <div class="paper-container">
+        <img 
+          [src]="section.paperImage" 
+          alt="" 
+          class="paper-bg"
+          loading="lazy">
+
+        <img 
+          [src]="section.contentImage" 
+          [alt]="section.label" 
+          class="content-img"
+          loading="lazy">
+
+        <div class="pin"></div>
+      </div>
+      <span class="item-label">{{ section.label }}</span>
+    </button>
+    <app-modal
+
+  [abierto]="mostrarModalDesbloqueables"
+
+  [titulo]="'Seleccionar tipo de objetos'"
+
+  (cerrar)="cerrarModal()"
+
+>
+
+  <div class="modal-desbloqueables">
+
+    <p>
+
+      ¿Qué deseas explorar?
+
+    </p>
+
+    <div class="modal-botones">
+
+      <button
+
+        (click)="abrirObjetos('inicio')"
+
+      >
+
+        Objetos Base
+
+      </button>
+
+      <button
+
+        (click)="abrirObjetos('desbloqueables')"
+
+      >
+
+        Objetos Desbloqueables
+
+      </button>
+
+    </div>
+
+  </div>
+
+</app-modal>
+  </div>
+</div>

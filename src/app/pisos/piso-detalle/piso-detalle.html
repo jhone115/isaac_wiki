@@ -1,0 +1,85 @@
+<div
+  class="detalle"
+
+  *ngIf="piso"
+>
+
+  <h1>
+
+    {{ piso.nombre }}
+
+  </h1>
+
+  <p>
+
+    {{ piso.descripcion }}
+
+  </p>
+
+  <!-- ENEMIGOS -->
+
+  <h2>
+
+    Enemigos
+
+  </h2>
+
+  <div class="tags">
+
+    <button
+
+      *ngFor="
+        let enemigo
+        of piso.enemigos
+      "
+
+      (click)="
+        abrirEnemigo(
+          enemigo
+        )
+      "
+
+    >
+
+      {{ enemigo }}
+
+    </button>
+
+  </div>
+
+  <!-- BOSSES -->
+
+  <h2>
+
+    Jefes
+
+  </h2>
+
+  <div class="tags">
+
+    <button
+
+      *ngFor="
+        let boss
+        of piso.bosses
+      "
+
+      (click)="
+        abrirEnemigo(
+          boss
+        )
+      "
+
+    >
+
+      {{ boss }}
+
+    </button>
+
+  </div>
+  <h2>
+    Características
+  </h2>
+  <div class="tags">
+    {{piso.caracteristicas.join(', ')}}
+</div>

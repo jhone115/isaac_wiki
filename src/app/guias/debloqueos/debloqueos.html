@@ -1,0 +1,111 @@
+<div
+  class="loading"
+  *ngIf="cargando"
+>
+
+  Cargando desbloqueos...
+
+</div>
+
+<div
+  class="desbloqueos-container"
+  *ngIf="!cargando"
+>
+
+  <!-- HERO -->
+
+  <section class="hero-unlocks">
+
+    <div class="hero-overlay">
+
+      <h1>
+        DESBLOQUEOS
+      </h1>
+
+      <p>
+
+        Aprende cómo desbloquear
+        personajes secretos,
+        rutas y contenido oculto.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- GRID -->
+
+  <section class="unlock-grid">
+
+    <div
+
+      class="unlock-card"
+
+      *ngFor="
+        let unlock
+        of desbloqueos
+      "
+    >
+
+      <div class="unlock-img">
+
+        <img
+
+          [src]="
+            'assets/imagenes/' +
+            unlock.imagen
+          "
+
+          [alt]="
+            unlock.nombre
+          "
+
+        >
+
+      </div>
+
+      <div class="unlock-info">
+
+        <h2>
+          {{ unlock.nombre }}
+        </h2>
+
+        <p>
+          {{ unlock.descripcion }}
+        </p>
+
+        <!-- PASOS -->
+
+        <div class="pasos">
+
+          <h3>
+            Pasos
+          </h3>
+
+          <ol>
+
+            <li
+
+              *ngFor="
+                let paso
+                of unlock.pasos
+              "
+
+            >
+
+              {{ paso }}
+
+            </li>
+
+          </ol>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

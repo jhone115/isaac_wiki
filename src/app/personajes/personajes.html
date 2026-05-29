@@ -1,0 +1,56 @@
+
+<div class="texto">
+  <main>
+    <h1 style="text-align:center"><b>PERSONAJES</b></h1>
+  </main>
+</div>
+
+<div class="imagen">
+  <img src="../../assets/imagenes/personajesimagenes/who am i.png">
+</div>
+
+<h2 style="text-align:center"><b>normales</b></h2>
+
+<div class="wrapper">
+  <div class="avatars">
+
+    <div class="avatar"
+         *ngFor="let p of normales">
+
+      <a [routerLink]="['/personaje']"
+         [queryParams]="{ id: p.id }">
+
+        <div class="circle">
+          <img *ngFor="let img of p.imagen | imagenes" [src]="'assets/imagenes/' + img">
+        </div>
+
+        <p>{{ p.nombre }}</p>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+<h2 style="text-align:center"><b>tainted</b></h2>
+
+<div class="wrapper">
+  <div class="avatars">
+
+    <div class="avatar"
+         *ngFor="let p of tainted">
+
+      <a [routerLink]="['/personaje']"
+         [queryParams]="{ id: p.id }">
+
+        <div class="circle">
+          <img *ngFor="let img of p.imagen | imagenes" [src]="'assets/imagenes/' + img">
+        </div>
+
+        <p>{{ p.nombre }}</p>
+      </a>
+
+    </div>
+
+  </div>
+</div>

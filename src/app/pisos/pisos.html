@@ -1,0 +1,243 @@
+<div
+  class="loading"
+  *ngIf="cargando"
+>
+
+  Cargando pisos...
+
+</div>
+<div class="wrapper-pisos">
+  <div
+    class="pisos-container"
+    *ngIf="!cargando"
+  >
+
+  <!-- HERO -->
+
+  <section
+    class="hero-piso"
+
+    *ngIf="
+      obtenerPisoActual()
+    "
+
+    [style.background-image]="
+      'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url(' +
+      obtenerRutaImagen(
+        obtenerPisoActual()!
+      ) +
+      ')'
+    "
+  >
+
+    <div
+      class="hero-overlay"
+    >
+
+      <h1>
+
+        PISOS
+
+      </h1>
+
+      <h2>
+
+        {{
+          obtenerPisoActual()
+          ?.nombre
+        }}
+
+      </h2>
+
+      <p>
+
+        {{
+          obtenerPisoActual()
+          ?.descripcioncorta
+        }}
+
+      </p>
+
+      <button
+
+        class="hero-btn"
+
+        (click)="
+          abrirPiso(
+            obtenerPisoActual()!
+          )
+        "
+
+      >
+
+        Explorar piso
+
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- CONTEXTO -->
+
+  <section
+    class="info-general"
+  >
+
+    <h2>
+
+      CONTEXTO GENERAL
+
+    </h2>
+
+    <p>
+
+      Cada piso en The Binding of Isaac
+      representa una zona distinta
+      del recorrido de Isaac.
+
+      Cada uno posee enemigos,
+      jefes, ambientación y mecánicas
+      únicas.
+
+    </p>
+
+  </section>
+
+  <!-- LISTA DE PISOS -->
+
+  <section
+    class="lista-pisos-section"
+  >
+
+    <h2>
+
+      Tipos de pisos principales
+
+    </h2>
+
+    <div
+      class="lista-pisos"
+    >
+
+      <div
+
+        class="piso-card"
+
+        *ngFor="
+          let piso
+          of pisos
+        "
+
+        (click)="
+          abrirPiso(
+            piso
+          )
+        "
+
+      >
+
+        <!-- IMAGEN -->
+
+        <div
+          class="piso-img"
+        >
+
+          <img
+
+            [src]="
+              obtenerRutaImagen(
+                piso
+              )
+            "
+
+            [alt]="
+              piso.nombre
+            "
+
+          >
+
+        </div>
+
+        <!-- INFO -->
+
+        <div
+          class="piso-info"
+        >
+
+          <h3>
+
+            {{ piso.nombre }}
+
+          </h3>
+
+          <p>
+
+            {{ piso.descripcioncorta }}
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ESTRUCTURA -->
+
+  <section
+    class="estructura"
+  >
+
+    <h2>
+
+      Estructura típica
+      de un piso
+
+    </h2>
+
+    <ul>
+
+      <li>
+
+        🏆 Item Room:
+        sala con objeto especial.
+
+      </li>
+
+      <li>
+
+        👑 Boss Room:
+        combate contra el jefe.
+
+      </li>
+
+      <li>
+
+        🛒 Shop:
+        tienda con consumibles
+        y objetos.
+
+      </li>
+
+      <li>
+
+        ❓ Secret Rooms:
+        salas ocultas con recompensas.
+
+      </li>
+
+      <li>
+
+        🔥 Curse Rooms:
+        riesgo por recompensa.
+
+      </li>
+
+    </ul>
+
+  </section>
+
+</div>

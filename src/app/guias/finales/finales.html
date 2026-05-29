@@ -1,0 +1,181 @@
+<div
+  class="loading"
+  *ngIf="cargando"
+>
+
+  Cargando finales...
+
+</div>
+
+<div
+  class="finales-container"
+  *ngIf="!cargando"
+>
+
+  <!-- HERO -->
+
+  <section class="hero-finales">
+
+    <div class="hero-overlay">
+
+      <h1>
+        FINALES
+      </h1>
+
+      <p>
+
+        Descubre todos los endings
+        de The Binding of Isaac,
+        desde rutas clásicas
+        hasta finales alternos
+        y secretos.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- NORMALES -->
+
+  <section class="categoria-section">
+
+    <h2>
+      Finales normales
+    </h2>
+
+    <div class="finales-grid">
+
+      <div
+        class="final-card"
+
+        *ngFor="
+          let final
+          of finalesNormales
+        "
+      >
+
+        <div class="final-img">
+
+          <img
+
+            [src]="
+              'assets/imagenes/' +
+              final.imagen
+            "
+
+            [alt]="
+              final.nombre
+            "
+
+          >
+
+        </div>
+
+        <div class="final-info">
+
+          <h3>
+            {{ final.nombre }}
+          </h3>
+
+          <p>
+            {{ final.descripcion }}
+          </p>
+
+          <div class="requisitos">
+
+            <span
+
+              *ngFor="
+                let req
+                of final.requisitos
+              "
+
+            >
+
+              {{ req }}
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ALTERNOS -->
+
+  <section class="categoria-section">
+
+    <h2>
+      Finales alternos
+    </h2>
+
+    <div class="finales-grid">
+
+      <div
+        class="final-card alterno"
+
+        *ngFor="
+          let final
+          of finalesAlternos
+        "
+      >
+
+        <div class="final-img">
+
+          <img
+
+            [src]="
+              'assets/imagenes/' +
+              final.imagen
+            "
+
+            [alt]="
+              final.nombre
+            "
+
+          >
+
+        </div>
+
+        <div class="final-info">
+
+          <h3>
+            {{ final.nombre }}
+          </h3>
+
+          <p>
+            {{ final.descripcion }}
+          </p>
+
+          <div class="requisitos">
+
+            <span
+
+              *ngFor="
+                let req
+                of final.requisitos
+              "
+
+            >
+
+              {{ req }}
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

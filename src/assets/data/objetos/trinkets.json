@@ -1,0 +1,498 @@
+
+{
+  "trinkets": [
+
+    {
+      "id": 1,
+      "clave": "swallowedpenny",
+      "nombre": "Swallowed Penny",
+      "descripcion": "Genera monedas al recibir daño.",
+      "efecto": "Coin drop on hit",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Economía",
+      "stackeable": false,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 2,
+      "clave": "petrifiedpoop",
+      "nombre": "Petrified Poop",
+      "descripcion": "Aumenta el loot de las heces.",
+      "efecto": "Más drops de poop",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Loot",
+      "stackeable": false,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 3,
+      "clave": "aaabattery",
+      "nombre": "AAA Battery",
+      "descripcion": "Reduce la carga necesaria de objetos activos.",
+      "efecto": "Charge reduction",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Batería",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 4,
+      "clave": "brokenremote",
+      "nombre": "Broken Remote",
+      "descripcion": "Teletransporta al usar objetos activos.",
+      "efecto": "Random teleport",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Teletransporte",
+      "stackeable": false,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 5,
+      "clave": "purpleheart",
+      "nombre": "Purple Heart",
+      "descripcion": "Incrementa campeones enemigos.",
+      "efecto": "Más champions",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Riesgo",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 7,
+      "clave": "rosarybead",
+      "nombre": "Rosary Bead",
+      "descripcion": "Incrementa angel rooms.",
+      "efecto": "Angel chance up",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Angelical",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 9,
+      "clave": "pulseworm",
+      "nombre": "Pulse Worm",
+      "descripcion": "Lágrimas con tamaño variable.",
+      "efecto": "Oscillating tears",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Worm",
+      "stackeable": false,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 10,
+      "clave": "wiggleworm",
+      "nombre": "Wiggle Worm",
+      "descripcion": "Lágrimas onduladas.",
+      "efecto": "Spectral wiggle tears",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Worm",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 11,
+      "clave": "ringworm",
+      "nombre": "Ring Worm",
+      "descripcion": "Lágrimas orbitan en espiral.",
+      "efecto": "Spiral tears",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Worm",
+      "stackeable": false,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 13,
+      "clave": "storecredit",
+      "nombre": "Store Credit",
+      "descripcion": "Permite obtener un item gratis en tienda.",
+      "efecto": "Free shop item",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Economía",
+      "stackeable": false,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 15,
+      "clave": "luckyrock",
+      "nombre": "Lucky Rock",
+      "descripcion": "Rocas destruidas pueden dar monedas.",
+      "efecto": "Coin rocks",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Economía",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 19,
+      "clave": "paperclip",
+      "nombre": "Paper Clip",
+      "descripcion": "Abre cofres dorados gratis.",
+      "efecto": "Golden chests free",
+      "unlock": "Derrota a Isaac con Keeper",
+      "tipo": "Utility",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 20,
+      "clave": "monkeypaw",
+      "nombre": "Monkey Paw",
+      "descripcion": "Otorga black hearts en peligro.",
+      "efecto": "Emergency black hearts",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Defensa",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 23,
+      "clave": "missingposter",
+      "nombre": "Missing Poster",
+      "descripcion": "Permite desbloquear The Lost.",
+      "efecto": "Lost unlock",
+      "unlock": "Derrota a The Lamb con Isaac",
+      "tipo": "Unlock",
+      "stackeable": false,
+      "rareza": "Muy raro"
+    },
+
+    {
+      "id": 30,
+      "clave": "pinkyeye",
+      "nombre": "Pinky Eye",
+      "descripcion": "Probabilidad de lágrimas venenosas.",
+      "efecto": "Poison tears",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Status",
+      "stackeable": false,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 31,
+      "clave": "pushpin",
+      "nombre": "Push Pin",
+      "descripcion": "Probabilidad de lágrimas espectrales.",
+      "efecto": "Spectral tears",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Tears",
+      "stackeable": false,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 32,
+      "clave": "libertycap",
+      "nombre": "Liberty Cap",
+      "descripcion": "Efectos aleatorios por sala.",
+      "efecto": "Random mushroom effect",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Random",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 35,
+      "clave": "curvedhorn",
+      "nombre": "Curved Horn",
+      "descripcion": "Incrementa el daño.",
+      "efecto": "+2 Damage",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Damage",
+      "stackeable": false,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 37,
+      "clave": "goathoof",
+      "nombre": "Goat Hoof",
+      "descripcion": "Incrementa velocidad.",
+      "efecto": "Speed Up",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Stat Up",
+      "stackeable": false,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 39,
+      "clave": "cancer",
+      "nombre": "Cancer",
+      "descripcion": "Gran incremento de tears.",
+      "efecto": "Massive tears up",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Stat Up",
+      "stackeable": false,
+      "rareza": "Muy raro"
+    },
+
+    {
+      "id": 41,
+      "clave": "matchstick",
+      "nombre": "Match Stick",
+      "descripcion": "Más bombas aparecen.",
+      "efecto": "Bomb drops",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Bombas",
+      "stackeable": false,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 45,
+      "clave": "aceofspades",
+      "nombre": "Ace of Spades",
+      "descripcion": "Más cartas aparecen.",
+      "efecto": "Card drops",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Cartas",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 53,
+      "clave": "tick",
+      "nombre": "Tick",
+      "descripcion": "Daña bosses automáticamente.",
+      "efecto": "Boss HP reduction",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Boss",
+      "stackeable": false,
+      "rareza": "Común"
+    },
+
+    {
+      "id": 61,
+      "clave": "thelefthand",
+      "nombre": "The Left Hand",
+      "descripcion": "Convierte cofres en red chests.",
+      "efecto": "Red chest conversion",
+      "unlock": "Derrota a Ultra Pride",
+      "tipo": "Chest",
+      "stackeable": false,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 63,
+      "clave": "safetyscissors",
+      "nombre": "Safety Scissors",
+      "descripcion": "Neutraliza troll bombs.",
+      "efecto": "Troll bombs harmless",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Bombas",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 64,
+      "clave": "rainbowworm",
+      "nombre": "Rainbow Worm",
+      "descripcion": "Cambia efectos worm constantemente.",
+      "efecto": "Random worm effect",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Worm",
+      "stackeable": false,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 82,
+      "clave": "goldenhorseshoe",
+      "nombre": "Golden Horseshoe",
+      "descripcion": "Mayor probabilidad de treasure rooms dobles.",
+      "efecto": "Double treasure rooms",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Treasure",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 92,
+      "clave": "crackedcrown",
+      "nombre": "Cracked Crown",
+      "descripcion": "Multiplica stats.",
+      "efecto": "Stat multiplier",
+      "unlock": "Completa 5 Daily Runs seguidas",
+      "tipo": "Stat Up",
+      "stackeable": false,
+      "rareza": "Muy raro"
+    },
+
+    {
+      "id": 104,
+      "clave": "wishbone",
+      "nombre": "Wish Bone",
+      "descripcion": "Puede generar items al recibir daño.",
+      "efecto": "Item spawn chance",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Loot",
+      "stackeable": false,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 110,
+      "clave": "silverdollar",
+      "nombre": "Silver Dollar",
+      "descripcion": "Tiendas aparecen en Womb.",
+      "efecto": "Womb shops",
+      "unlock": "Derrota a The Lamb con Keeper",
+      "tipo": "Shop",
+      "stackeable": false,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 123,
+      "clave": "filigreefeather",
+      "nombre": "Filigree Feather",
+      "descripcion": "Angel bosses dejan items.",
+      "efecto": "Angel item drops",
+      "unlock": "Derrota a Mega Satan",
+      "tipo": "Angelical",
+      "stackeable": false,
+      "rareza": "Muy raro"
+    },
+
+    {
+      "id": 131,
+      "clave": "blessedpenny",
+      "nombre": "Blessed Penny",
+      "descripcion": "Puede generar soul hearts.",
+      "efecto": "Soul heart chance",
+      "unlock": "Derrota a Delirium con Bethany",
+      "tipo": "Corazones",
+      "stackeable": false,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 139,
+      "clave": "teardropcharm",
+      "nombre": "Teardrop Charm",
+      "descripcion": "Incrementa tears gradualmente.",
+      "efecto": "Progressive tears up",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Stat Up",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 145,
+      "clave": "perfection",
+      "nombre": "Perfection",
+      "descripcion": "Otorga +10 luck.",
+      "efecto": "+10 Luck",
+      "unlock": "Completa 3 pisos sin recibir daño",
+      "tipo": "Luck",
+      "stackeable": false,
+      "rareza": "Muy raro"
+    },
+
+    {
+      "id": 146,
+      "clave": "devilscrown",
+      "nombre": "Devil's Crown",
+      "descripcion": "Treasure rooms contienen items devil.",
+      "efecto": "Devil treasure rooms",
+      "unlock": "Derrota a Satan con Tainted Azazel",
+      "tipo": "Devil",
+      "stackeable": false,
+      "rareza": "Muy raro"
+    },
+
+    {
+      "id": 147,
+      "clave": "chargedpenny",
+      "nombre": "Charged Penny",
+      "descripcion": "Monedas pueden recargar objetos.",
+      "efecto": "Coin charges",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Batería",
+      "stackeable": false,
+      "rareza": "Poco común"
+    },
+
+    {
+      "id": 155,
+      "clave": "holycrown",
+      "nombre": "Holy Crown",
+      "descripcion": "Añade treasure rooms en The Chest.",
+      "efecto": "Chest treasure rooms",
+      "unlock": "Derrota a Delirium con Tainted Lost",
+      "tipo": "Treasure",
+      "stackeable": false,
+      "rareza": "Muy raro"
+    },
+
+    {
+      "id": 161,
+      "clave": "wickedcrown",
+      "nombre": "Wicked Crown",
+      "descripcion": "Añade devil treasure rooms en Sheol.",
+      "efecto": "Sheol treasure rooms",
+      "unlock": "Derrota a Delirium con Tainted Judas",
+      "tipo": "Devil",
+      "stackeable": false,
+      "rareza": "Muy raro"
+    },
+
+    {
+      "id": 170,
+      "clave": "crystalkey",
+      "nombre": "Crystal Key",
+      "descripcion": "Abre puertas especiales aleatoriamente.",
+      "efecto": "Special doors",
+      "unlock": "Disponible desde el inicio",
+      "tipo": "Secretos",
+      "stackeable": false,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 188,
+      "clave": "icecube",
+      "nombre": "Ice Cube",
+      "descripcion": "Congela enemigos ocasionalmente.",
+      "efecto": "Freeze enemies",
+      "unlock": "Derrota a Mother con Tainted Jacob",
+      "tipo": "Status",
+      "stackeable": false,
+      "rareza": "Raro"
+    },
+
+    {
+      "id": 189,
+      "clave": "sigilofbaphomet",
+      "nombre": "Sigil of Baphomet",
+      "descripcion": "Invulnerabilidad temporal tras limpiar salas.",
+      "efecto": "Temporary shield",
+      "unlock": "Derrota a The Beast con Tainted Judas",
+      "tipo": "Defensa",
+      "stackeable": false,
+      "rareza": "Muy raro"
+    }
+
+  ]
+}

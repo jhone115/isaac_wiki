@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ruta_basica",
+
+    "nombre": "Ruta básica",
+
+    "descripcion":
+      "Ruta tradicional hasta Mom.",
+
+    "pisos": [
+      "Basement",
+      "Caves",
+      "Depths"
+    ],
+
+    "finales": [
+      "mom"
+    ],
+
+    "imagen":
+      "rutas/ruta_basica.png"
+  },
+
+  {
+    "id": "ruta_beast",
+
+    "nombre": "Ruta Beast",
+
+    "descripcion":
+      "Ruta alterna hacia Home.",
+
+    "pisos": [
+      "Basement",
+      "Caves",
+      "Depths",
+      "Mausoleum",
+      "Home"
+    ],
+
+    "finales": [
+      "beast"
+    ],
+
+    "imagen":
+      "rutas/beast.png"
+  }
+]

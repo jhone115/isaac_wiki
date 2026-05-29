@@ -1,0 +1,142 @@
+<app-navegacion-items>
+</app-navegacion-items>
+
+<div class="contenedor">
+
+  <div class="tabla-container">
+
+    <table>
+
+      <thead>
+
+        <tr>
+
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Tipo</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr
+          *ngFor="
+            let sinergia of sinergias
+          "
+        >
+
+          <td>
+
+            {{ sinergia.id }}
+
+          </td>
+
+          <td
+            class="clickable"
+            (click)="
+              seleccionarSinergia(
+                sinergia
+              )
+            "
+          >
+
+            {{ sinergia.nombre }}
+
+          </td>
+
+          <td>
+
+            {{ sinergia.descripcion }}
+
+          </td>
+
+          <td>
+
+            {{ sinergia.tipo }}
+
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
+
+<app-modal
+
+  [abierto]="
+    sinergiaSeleccionada !== null
+  "
+
+  [titulo]="
+    sinergiaSeleccionada?.nombre || ''
+  "
+
+  (cerrar)="
+    cerrarModalSinergia()
+  "
+
+>
+
+  <app-sinergias-detalle
+
+    *ngIf="
+      sinergiaSeleccionada
+    "
+
+    [sinergia]="
+      sinergiaSeleccionada
+    "
+
+    [objetos]="objetos"
+
+    (abrirObjeto)="
+      abrirObjetoDesdeSinergia(
+        $event
+      )
+    "
+
+  >
+
+  </app-sinergias-detalle>
+
+</app-modal>
+
+<app-modal
+
+  [abierto]="
+    objetoSeleccionado !== null
+  "
+
+  [titulo]="
+    objetoSeleccionado?.nombre || ''
+  "
+
+  (cerrar)="
+    cerrarModalObjeto()
+  "
+
+>
+
+  <app-item-detalle
+
+    *ngIf="
+      objetoSeleccionado
+    "
+
+    [objeto]="
+      objetoSeleccionado
+    "
+
+  >
+
+  </app-item-detalle>
+
+</app-modal>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "forgotten",
+
+    "nombre": "The Forgotten",
+
+    "tipo": "personaje",
+
+    "imagen":
+      "personajesimagenes/forgotten.png",
+
+    "descripcion":
+      "Uno de los desbloqueos más complejos.",
+
+    "pasos": [
+
+      "Derrota al primer boss en menos de 1 minuto.",
+
+      "Coloca una bomba en la sala inicial.",
+
+      "Recoge Broken Shovel.",
+
+      "Completa Boss Rush.",
+
+      "Lleva Broken Shovel hasta Dark Room.",
+
+      "Excava en la habitación especial."
+    ],
+
+    "requisitos": [
+      "Derrotar The Lamb"
+    ],
+
+    "recompensa":
+      "Desbloquea The Forgotten"
+  }
+]

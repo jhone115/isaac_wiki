@@ -1,0 +1,93 @@
+
+{
+  "sinergias": [
+
+    {
+      "id": 1,
+
+      "nombre": "Brimstone + Spoon Bender",
+
+      "descripcion":
+        "El láser de Brimstone obtiene homing.",
+
+      "efecto":
+        "Brimstone sigue enemigos automáticamente.",
+
+      "objetos": [118, 3],
+
+      "tipo": "Homing",
+
+      "rareza": "Legendaria"
+    },
+
+    {
+      "id": 2,
+
+      "nombre": "Technology + Loki's Horns",
+
+      "descripcion":
+        "Disparas láseres en 4 direcciones.",
+
+      "efecto":
+        "Quad laser burst.",
+
+      "objetos": [68, 87],
+
+      "tipo": "Láser",
+
+      "rareza": "Rara"
+    },
+    {
+      "id": 3,
+
+      "nombre": "Glass Canon + Spoon Bender",
+
+      "descripcion":
+        "la activa de Glass Canon obtiene homing.",
+
+      "efecto":
+        "el disparo sigue enemigos automáticamente.",
+
+      "objetos": [352, 3],
+
+      "tipo": "Homing",
+
+      "rareza": "mitica"
+    },
+    {
+      "id": 4,
+
+      "nombre": "Brimstone + My Reflection",
+
+      "descripcion":
+        "El láser de Brimstone hace doble daño pero se acorta de frente.",
+
+      "efecto":
+        "Brimstone se devuelve en forma de boomerang.",
+
+      "objetos": [118, 5],
+
+      "tipo": "Rebote",
+
+      "rareza": "rara"
+    },
+    {
+        "id": 5,
+
+      "nombre": "dr. fetus + spoon bender + Rocket in a Jar",
+
+      "descripcion":
+        "las bombas de dr. fetus se vuelven misiles y obtienen homing.",
+
+      "efecto":
+        "misiles teledirigidos.",
+
+      "objetos": [52, 3, 583],
+
+      "tipo": "Homing",
+
+      "rareza": "Legendaria"
+    }
+
+  ]
+}

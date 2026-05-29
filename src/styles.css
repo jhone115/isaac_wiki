@@ -1,1 +1,615 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'mifuente';
+    src: url('./assets/fuente/upheavtt.ttf') format('truetype');
+    font-style: normal;
+}
+
+/* ========== RESET ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ========== BODY ========== */
+
+body {
+
+    font-family: 'mifuente', sans-serif;
+
+    background:
+        url(assets/imagenes/pisos/Basement-bg.png);
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+}
+
+
+/* ========== CONTENIDO ========== */
+
+.contenido {
+
+    width: 100%;
+
+    max-width: 1600px;
+
+    margin: 0 auto;
+
+    padding:
+        20px
+        20px
+        20px
+        90px;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+/* ========== LOGO ========== */
+
+.logo-wrapper {
+
+    background: #000000ab;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    margin: 20px auto;
+
+    padding: 10px 20px;
+
+    border-radius: 10px;
+}
+
+.logo {
+
+    width: clamp(120px, 18vw, 220px);
+
+    height: auto;
+}
+
+/* ========== WRAPPER ========== */
+
+.wrapper {
+
+    background: #00000078;
+
+    width: 100%;
+
+    margin: 20px auto;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+/* FIX FLEX OVERFLOW */
+
+.wrapper > * {
+    min-width: 0;
+}
+
+/* ========== TEXTO ========== */
+
+.texto {
+    width: 100%;
+
+    flex: 1;
+
+    min-width: 280px;
+
+    padding: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: left;
+
+    font-size: clamp(15px, 1.3vw, 28px);
+
+    overflow-wrap: break-word;
+}
+
+/* ========== TITULOS ========== */
+
+h1 {
+
+    font-size: clamp(24px, 4vw, 42px);
+
+    margin-bottom: 20px;
+
+    line-height: 1.2;
+}
+
+p {
+
+    margin-bottom: 15px;
+
+    overflow-wrap: break-word;
+}
+
+/* ========== INDICE ========== */
+
+.indice {
+
+    flex: 0 0 240px;
+
+    max-width: 240px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    position: sticky;
+
+    top: 20px;
+
+    background: #e0b19d9a;
+
+    font-size: clamp(14px, 1vw, 20px);
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    max-height: 85vh;
+
+    word-break: break-word;
+
+    width: 100%;
+
+    max-width: 240px;
+
+    overflow-x: hidden;
+}
+
+.indice ul {
+
+    list-style: none;
+
+    padding-left: 15px;
+}
+
+.indice li {
+
+    margin-bottom: 8px;
+}
+
+.indice a {
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.indice a:hover {
+
+    opacity: 0.7;
+}
+
+/* ========== IMAGEN ========== */
+
+.imagen {
+
+    flex: 0 0 280px;
+
+    width: clamp(180px, 20vw, 300px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.imagen img {
+
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+.imagen p {
+
+    margin-top: 10px;
+
+    font-size: clamp(12px, 1vw, 16px);
+}
+
+/* ========== MENU WRAPPER ========== */
+
+.menu-wrapper {
+
+    width: 100%;
+
+    margin: 20px auto;
+
+    background-color: #00000078;
+
+    padding: clamp(20px, 4vw, 40px);
+
+    border-radius: 12px;
+}
+
+/* ========== GRID ========== */
+
+.menu-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(120px, 1fr));
+
+    gap: 20px;
+
+    width: 100%;
+
+    justify-items: center;
+}
+
+/* ========== ITEMS MENU ========== */
+
+.menu-item {
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transition: transform 0.2s ease;
+
+    width: 100%;
+}
+
+.menu-item:hover {
+
+    transform: translateY(-5px);
+}
+
+.menu-item:active {
+
+    transform: scale(0.96);
+}
+
+/* ========== PAPER ========== */
+
+.paper-container {
+
+    position: relative;
+
+    width: clamp(90px, 12vw, 120px);
+
+    aspect-ratio: 120 / 140;
+}
+
+.paper-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    z-index: 1;
+}
+
+.content-img {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -55%);
+
+    width: 60%;
+
+    max-height: 50%;
+
+    object-fit: contain;
+
+    z-index: 2;
+
+    image-rendering: pixelated;
+
+    pointer-events: none;
+}
+
+/* ========== PIN ========== */
+
+.pin {
+
+    position: absolute;
+
+    top: -8px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 30% 30%, #888, #333);
+
+    z-index: 3;
+}
+
+/* ========== LABEL ========== */
+
+.item-label {
+
+    color: white;
+
+    text-align: center;
+
+    font-size: clamp(11px, 1vw, 15px);
+
+    text-shadow:
+        1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* ========== TABLET ========== */
+
+@media (max-width: 900px) {
+
+    .contenido {
+
+        width: calc(100% - 60px);
+
+        margin-left: 60px;
+    }
+
+    .wrapper {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .indice {
+        max-width: 100%;
+
+        width: 100%;
+    }
+
+
+    .imagen {
+
+        width: min(100%, 350px);
+
+        margin: 0 auto;
+    }
+
+    .texto {
+
+        text-align: center;
+    }
+}
+
+/* ========== MOVIL ========== */
+
+@media (max-width: 776px) {
+
+    body {
+
+        background-attachment: scroll;
+    }
+
+    .contenido {
+
+        width: 100%;
+
+        margin-left: 0;
+
+        padding:
+            70px 10px 20px;
+    }
+
+    .wrapper {
+
+        padding: 15px;
+
+        gap: 15px;
+    }
+
+    .texto {
+
+        min-width: 100%;
+
+        font-size:
+            clamp(15px, 4vw, 20px);
+
+        text-align: left;
+    }
+
+    .menu-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .paper-container {
+
+        width: 100px;
+    }
+}
+
+/* ========== MOVILES PEQUEÑOS ========== */
+
+@media (max-width: 480px) {
+
+    .menu-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .paper-container {
+
+        width: 90px;
+    }
+
+    .wrapper,
+    .menu-wrapper {
+
+        padding: 10px;
+    }
+
+    h1 {
+
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contenido {
+
+        padding:
+            70px
+            10px
+            20px
+            10px;
+    }
+
+}
+
+/* ===================================== */
+/* FIX GLOBAL OVERFLOW */
+/* ===================================== */
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Angular root */
+
+app-root {
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Todos los contenedores */
+
+* {
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+/* Media nunca rompe */
+
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flex fix */
+
+.wrapper,
+.layout,
+.contenido,
+.texto,
+.indice,
+.imagen,
+.menu-grid {
+
+    min-width: 0;
+}
+
+/* Grid fix */
+
+.menu-grid {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Listas largas */
+
+.indice ul,
+.indice li,
+.indice a {
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Textos */
+
+p,
+h1,
+h2,
+h3,
+span,
+a {
+
+    overflow-wrap: break-word;
+}

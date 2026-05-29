@@ -1,0 +1,136 @@
+<div
+    class="detalle"
+    *ngIf="objeto"
+>
+
+    <!-- HEADER -->
+
+    <div class="header-detalle">
+
+        <img
+            [src]="obtenerRutaIcono(objeto)"
+            [alt]="objeto.nombre"
+            class="icono-grande"
+        >
+
+        <div>
+
+            <h2>
+                {{ objeto.nombre }}
+            </h2>
+
+            <p>
+                ID: {{ objeto.id }}
+            </p>
+
+            <span class="tipo">
+                {{ objeto.tipo }}
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- DESCRIPCIÓN -->
+
+    <div class="bloque">
+
+        <h3>
+            Descripción
+        </h3>
+
+        <p>
+            {{ objeto.descripcion }}
+        </p>
+
+    </div>
+
+    <!-- EFECTO -->
+
+    <div class="bloque">
+
+        <h3>
+            Efecto
+        </h3>
+
+        <p>
+            {{ objeto.efecto }}
+        </p>
+
+    </div>
+
+    <!-- STATS -->
+
+    <div class="bloque">
+
+        <h3>
+            Stats
+        </h3>
+
+        <div
+            *ngIf="objeto.stats?.length; else sinStats"
+        >
+
+            <div
+                *ngFor="let stat of objeto.stats"
+                class="stat"
+            >
+
+                <span class="stat-tipo">
+                    {{ stat.tipo }}
+                </span>
+
+                <span class="stat-cambio">
+                    {{ stat.cambio }}
+                </span>
+
+            </div>
+
+        </div>
+
+        <ng-template #sinStats>
+
+            <p>
+                Este objeto no modifica stats.
+            </p>
+
+        </ng-template>
+
+    </div>
+
+    <!-- POOLS -->
+
+    <div class="bloque">
+
+        <h3>
+            Pools
+        </h3>
+
+        <div class="pools">
+
+            <span
+                *ngFor="let pool of objeto.pools"
+                class="pool"
+            >
+                {{ pool }}
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- UNLOCK -->
+
+    <div class="bloque">
+
+        <h3>
+            Unlock
+        </h3>
+
+        <p>
+            {{ objeto.unlock }}
+        </p>
+
+    </div>
+
+</div>

@@ -1,0 +1,41 @@
+<div class="pickup-detalle">
+
+  <img
+    [src]="obtenerRutaIcono()"
+    [alt]="pickup.nombre"
+    class="pickup-icono"
+  >
+
+  <h2>
+    {{ pickup.nombre }}
+  </h2>
+
+  <p>
+    {{ pickup.descripcion }}
+  </p>
+
+  <div class="pickup-info">
+
+    <p>
+      <strong>Tipo:</strong>
+      {{ pickup.tipo }}
+    </p>
+
+    <p>
+      <strong>Efecto:</strong>
+      {{ pickup.efecto }}
+    </p>
+
+    <p>
+      <strong>Unlock:</strong>
+      {{ pickup.unlock }}
+    </p>
+
+    <p>
+      <strong>Rareza:</strong>
+      {{ pickup.rareza }}
+    </p>
+
+  </div>
+
+</div>

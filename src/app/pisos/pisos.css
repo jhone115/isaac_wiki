@@ -1,0 +1,377 @@
+/* ========================= */
+/* WRAPPER */
+/* ========================= */
+
+.wrapper-pisos {
+
+    background: #00000078;
+
+    width: min(95%, 1400px);
+
+    margin: 20px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+    box-sizing: border-box;
+
+    padding: clamp(14px, 2vw, 30px);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+/* ========================= */
+/* CONTENEDOR */
+/* ========================= */
+
+.pisos-container {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 40px;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero-piso {
+
+    width: 100%;
+
+    min-height: 420px;
+
+    background-size: cover;
+
+    background-position: center;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+.hero-overlay {
+
+    width: 100%;
+
+    padding:
+        clamp(20px, 5vw, 60px);
+
+    text-align: center;
+
+    backdrop-filter: blur(2px);
+}
+
+.hero-overlay h1 {
+
+    color: #ffffff;
+
+    font-size: clamp(2rem, 6vw, 5rem);
+
+    margin-bottom: 12px;
+
+    word-break: break-word;
+}
+
+.hero-overlay h2 {
+
+    color: #d8d8d8;
+
+    font-size: clamp(1.5rem, 4vw, 3rem);
+
+    margin-bottom: 18px;
+
+    word-break: break-word;
+}
+
+.hero-overlay p {
+
+    color: #d0d0d0;
+
+    max-width: 850px;
+
+    margin: 0 auto 24px auto;
+
+    line-height: 1.7;
+
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+/* ========================= */
+/* BOTON */
+/* ========================= */
+
+.hero-btn {
+
+    border: none;
+
+    background: #8b2323;
+
+    color: white;
+
+    padding:
+        14px 24px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: clamp(14px, 1vw, 16px);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.hero-btn:hover {
+
+    transform: translateY(-2px);
+
+    background: #b12c2c;
+}
+
+/* ========================= */
+/* SECCIONES */
+/* ========================= */
+
+.info-general,
+.lista-pisos-section,
+.estructura {
+
+    width: 100%;
+}
+
+.info-general h2,
+.lista-pisos-section h2,
+.estructura h2 {
+
+    color: white;
+
+    margin-bottom: 18px;
+
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+
+    word-break: break-word;
+}
+
+.info-general p,
+.estructura li {
+
+    color: #d0d0d0;
+
+    line-height: 1.8;
+
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+/* ========================= */
+/* GRID */
+/* ========================= */
+
+.lista-pisos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 22px;
+
+    width: 100%;
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.piso-card {
+
+    background: #111;
+
+    border: 3px solid #4e2b20;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+.piso-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,0.6);
+}
+
+/* ========================= */
+/* IMAGEN */
+/* ========================= */
+
+.piso-img {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+}
+
+.piso-img img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* ========================= */
+/* INFO */
+/* ========================= */
+
+.piso-info {
+
+    padding: 18px;
+}
+
+.piso-info h3 {
+
+    color: white;
+
+    margin-top: 0;
+
+    margin-bottom: 12px;
+
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+
+    word-break: break-word;
+}
+
+.piso-info p {
+
+    color: #cfcfcf;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+    word-break: break-word;
+}
+
+/* ========================= */
+/* ESTRUCTURA */
+/* ========================= */
+
+.estructura ul {
+
+    margin: 0;
+
+    padding-left: 20px;
+}
+
+.estructura li {
+
+    margin-bottom: 12px;
+}
+
+/* ========================= */
+/* LOADING */
+/* ========================= */
+
+.loading {
+
+    width: 100%;
+
+    padding: 4rem;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 1.5rem;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+    .hero-piso {
+
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .lista-pisos {
+
+        grid-template-columns: 1fr;
+    }
+
+    .hero-btn {
+
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .wrapper-pisos {
+
+        width: 100%;
+
+        border-radius: 0;
+
+        margin: 0;
+
+        padding: 14px;
+    }
+
+    .hero-piso {
+
+        min-height: 280px;
+    }
+
+    .piso-info {
+
+        padding: 14px;
+    }
+
+    .estructura ul {
+
+        padding-left: 18px;
+    }
+}

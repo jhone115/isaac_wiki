@@ -1,0 +1,240 @@
+<div class="loading"
+     *ngIf="cargando">
+
+  Cargando enemigo...
+
+</div>
+
+<div
+  class="enemigo-container"
+
+  *ngIf="
+    enemigo as enemigoActual
+  "
+>
+
+  <div class="enemigo-card fade-in">
+
+    <!-- IMAGEN -->
+
+    <div class="enemigo-imagen">
+
+      <img
+
+        [src]="
+          obtenerRutaImagen()
+        "
+
+        [alt]="
+          enemigoActual.nombre
+        "
+
+      >
+
+    </div>
+
+    <!-- HEADER -->
+
+    <div class="enemigo-header">
+
+      <h1>
+
+        {{ enemigoActual.nombre }}
+
+      </h1>
+
+      <span
+
+        class="tipo"
+
+        [class.boss]="
+          enemigoActual.tipo
+          .includes('Boss')
+        "
+
+      >
+
+        {{
+          enemigoActual.tipo
+        }}
+
+      </span>
+
+    </div>
+
+    <!-- DESCRIPCIÓN -->
+
+    <div class="bloque">
+
+      <h2>
+        Descripción
+      </h2>
+
+      <p>
+
+        {{ enemigoActual.descripcion }}
+
+      </p>
+
+    </div>
+
+    <!-- DIFICULTAD -->
+
+    <div
+      class="bloque"
+
+      *ngIf="
+        enemigoActual.dificultad
+      "
+    >
+
+      <h2>
+        Dificultad
+      </h2>
+
+      <p>
+
+        {{
+          enemigoActual.dificultad
+        }}
+
+      </p>
+
+    </div>
+
+    <!-- PISOS -->
+
+    <div class="bloque">
+
+      <h2>
+        Pisos
+      </h2>
+
+        <div class="tags" *ngIf="enemigoActual.pisos">
+
+    <div class="tags">
+      <button
+        *ngFor="let piso of enemigoActual.pisos"
+        (click)="abrirPiso(piso)"
+      >
+        {{ piso }}
+      </button>
+    </div>
+  </div>
+
+    </div>
+
+    <!-- ATAQUES -->
+
+    <div
+      class="bloque"
+
+      *ngIf="
+        enemigoActual.ataques
+        
+      "
+    >
+
+      <h2>
+        Ataques
+      </h2>
+
+      <ul>
+
+        <li
+
+          *ngFor="
+            let ataque
+            of enemigoActual.ataques
+          "
+
+        >
+
+          {{ ataque }}
+
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- TAGS -->
+
+    <div
+      class="bloque"
+
+      *ngIf="
+        enemigoActual.tags
+        ?.length
+      "
+    >
+
+      <h2>
+        Tags
+      </h2>
+
+      <div class="tags">
+
+        <span
+
+          class="tag"
+
+          *ngFor="
+            let tag
+            of enemigoActual.tags
+          "
+
+        >
+
+          {{ tag }}
+
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- VARIANTES -->
+
+    <div
+      class="bloque"
+
+      *ngIf="
+        enemigoActual.variantes
+        ?.length
+      "
+    >
+
+      <h2>
+        Variantes
+      </h2>
+
+      <div class="variantes">
+
+        <div
+
+          class="variante"
+
+          *ngFor="
+            let variante
+            of enemigoActual.variantes
+          "
+
+          (click)="
+            abrirVariante(
+              variante.id
+            )
+          "
+        >
+
+          {{ variante.nombre }}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

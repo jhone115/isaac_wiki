@@ -1,0 +1,103 @@
+<app-navegacion-items>
+</app-navegacion-items>
+<div class="contenedor">
+
+  <div class="filtros">
+
+    <button
+      (click)="filtrarPickups('todos')"
+    >
+      Todos
+    </button>
+
+    <button
+      (click)="filtrarPickups('inicio')"
+    >
+      Disponibles desde el inicio
+    </button>
+
+    <button
+      (click)="filtrarPickups('desbloqueables')"
+    >
+      Desbloqueables
+    </button>
+
+  </div>
+
+  <div class="tabla-container">
+
+    <table>
+
+      <thead>
+
+        <tr>
+
+          <th>ID</th>
+          <th>Icono</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Unlock</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr
+          *ngFor="let pickup of pickupsFiltrados"
+        >
+
+          <td>
+            {{ pickup.id }}
+          </td>
+
+          <td>
+
+            <img
+              [src]="obtenerRutaIcono(pickup)"
+              [alt]="pickup.nombre"
+              class="icono"
+            >
+
+          </td>
+
+          <td
+            class="clickable"
+            (click)="seleccionarPickup(pickup)"
+          >
+
+            {{ pickup.nombre }}
+
+          </td>
+
+          <td>
+            {{ pickup.descripcion }}
+          </td>
+
+          <td>
+            {{ pickup.unlock }}
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
+
+<app-modal
+  [abierto]="pickupSeleccionado !== null"
+  [titulo]="pickupSeleccionado?.nombre || ''"
+  (cerrar)="cerrarModal()">
+
+    <app-pickup-detalle
+    *ngIf="pickupSeleccionado"
+    [pickup]="pickupSeleccionado">
+    </app-pickup-detalle>
+
+</app-modal>
+

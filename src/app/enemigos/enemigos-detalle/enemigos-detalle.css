@@ -1,0 +1,329 @@
+.loading {
+
+  width: 100%;
+
+  padding: 4rem;
+
+  text-align: center;
+
+  color: white;
+
+  font-size: 1.5rem;
+}
+
+/* ========================= */
+/* CONTENEDOR */
+/* ========================= */
+
+.enemigo-container {
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  padding: clamp(14px, 2vw, 32px);
+
+  box-sizing: border-box;
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.enemigo-card {
+
+  width: 100%;
+
+  max-width: 1000px;
+
+  background: #1b1b1b;
+
+  border: 2px solid #333;
+
+  border-radius: 18px;
+
+  padding: clamp(18px, 3vw, 36px);
+
+  color: white;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+/* ========================= */
+/* IMAGEN */
+/* ========================= */
+
+.enemigo-imagen {
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-bottom: 2rem;
+}
+
+.enemigo-imagen img {
+
+  width: clamp(120px, 30vw, 220px);
+
+  max-width: 100%;
+
+  image-rendering: pixelated;
+
+  object-fit: contain;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+.enemigo-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 2rem;
+
+  flex-wrap: wrap;
+}
+
+.enemigo-header h1 {
+
+  margin: 0;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  word-break: break-word;
+}
+
+/* ========================= */
+/* TIPO */
+/* ========================= */
+
+.tipo {
+
+  background: #2d6a4f;
+
+  padding:
+    10px 16px;
+
+  border-radius: 999px;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+.tipo.boss {
+
+  background: #9d0208;
+}
+
+/* ========================= */
+/* BLOQUES */
+/* ========================= */
+
+.bloque {
+
+  margin-bottom: 2rem;
+}
+
+.bloque h2 {
+
+  margin-bottom: 1rem;
+
+  color: #f1f1f1;
+
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+.bloque p {
+
+  line-height: 1.7;
+
+  color: #d3d3d3;
+
+  word-break: break-word;
+}
+
+/* ========================= */
+/* TAGS */
+/* ========================= */
+
+.tags {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.tag {
+
+  background: #333;
+
+  padding:
+    8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+}
+
+/* ========================= */
+/* BOTONES PISOS */
+/* ========================= */
+
+.tags button {
+
+  border: none;
+
+  background: #444;
+
+  color: white;
+
+  padding:
+    10px 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  word-break: break-word;
+}
+
+.tags button:hover {
+
+  background: #666;
+}
+
+/* ========================= */
+/* LISTAS */
+/* ========================= */
+
+ul {
+
+  margin: 0;
+
+  padding-left: 1.5rem;
+}
+
+li {
+
+  margin-bottom: 0.6rem;
+
+  line-height: 1.6;
+}
+
+/* ========================= */
+/* VARIANTES */
+/* ========================= */
+
+.variantes {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+.variante {
+
+  background: #2a2a2a;
+
+  border: 1px solid #444;
+
+  padding:
+    12px 16px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+
+  word-break: break-word;
+}
+
+.variante:hover {
+
+  transform: translateY(-2px);
+
+  border-color: #999;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .enemigo-header {
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .tipo {
+
+    width: fit-content;
+  }
+
+  .bloque {
+
+    text-align: center;
+  }
+
+  ul {
+
+    text-align: left;
+  }
+
+  .tags,
+  .variantes {
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .enemigo-card {
+
+    border-radius: 14px;
+  }
+
+  .tag,
+  .tags button,
+  .variante {
+
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .enemigo-header h1 {
+
+    font-size: 1.8rem;
+  }
+}

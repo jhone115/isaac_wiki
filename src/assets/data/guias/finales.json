@@ -1,0 +1,36 @@
+[
+  {
+    "id": "mom",
+    "nombre": "Mom",
+    "tipo": "normal",
+    "descripcioncorta": "Primer final principal.",
+    "descripcion": "Primer final principal.",
+    "imagen": "finales/mom.png",
+
+    "rutas": [
+      "ruta_basica"
+    ],
+
+    "requisitos": [
+      "Llegar a Depths II"
+    ]
+  },
+
+  {
+    "id": "beast",
+    "nombre": "The Beast",
+    "tipo": "alterno",
+    "descripcioncorta": "Final alterno de Repentance.",
+    "descripcion": "Final alterno de Repentance.",
+    "imagen": "finales/beast.png",
+
+    "rutas": [
+      "ruta_beast"
+    ],
+
+    "requisitos": [
+      "Tener Polaroid o Negative",
+      "Abrir Home"
+    ]
+  }
+]

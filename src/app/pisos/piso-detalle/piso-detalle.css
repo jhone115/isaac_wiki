@@ -1,0 +1,142 @@
+.detalle {
+
+    width: min(95%, 1200px);
+
+    margin: 20px auto;
+
+    padding:
+        clamp(18px, 3vw, 36px);
+
+    background: rgba(0,0,0,0.72);
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+/* ========================= */
+/* TITULOS */
+/* ========================= */
+
+.detalle h1 {
+
+    color: white;
+
+    text-align: center;
+
+    font-size: clamp(2rem, 5vw, 4rem);
+
+    margin-bottom: 20px;
+
+    word-break: break-word;
+}
+
+.detalle h2 {
+
+    color: #d8d8d8;
+
+    margin-top: 34px;
+
+    margin-bottom: 16px;
+
+    font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+
+.detalle p {
+
+    color: #d0d0d0;
+
+    line-height: 1.8;
+
+    font-size: clamp(14px, 1vw, 17px);
+
+    word-break: break-word;
+}
+
+/* ========================= */
+/* TAGS */
+/* ========================= */
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+/* ========================= */
+/* BOTONES */
+/* ========================= */
+
+.tags button {
+
+    border: none;
+
+    background: #2d2d2d;
+
+    color: white;
+
+    padding:
+        10px 16px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+.tags button:hover {
+
+    background: #444;
+
+    transform: translateY(-2px);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .tags {
+
+        justify-content: center;
+    }
+
+    .detalle {
+
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .tags button {
+
+        width: 100%;
+    }
+
+    .detalle {
+
+        width: 100%;
+
+        border-radius: 0;
+
+        margin: 0;
+    }
+}

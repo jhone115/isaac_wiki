@@ -1,0 +1,218 @@
+<div class="loading"
+     *ngIf="cargando">
+
+  Cargando personaje...
+
+</div>
+
+<div class="personaje-container"
+     *ngIf="personaje && !cargando">
+
+  <div class="personaje-card fade-in">
+
+    <!-- IMAGEN -->
+    <div class="personaje-imagen">
+
+      <img
+        *ngFor="let img of getImagenes(personaje.imagen)"
+        [src]="'../../../assets/imagenes/' + img"
+        [alt]="personaje.nombre">
+
+    </div>
+
+    <!-- NOMBRE -->
+    <h1 class="nombre">
+      {{ personaje.nombre }}
+    </h1>
+
+    <!-- TABLA -->
+    <div class="tabla-wrapper">
+
+      <table class="stats-table">
+
+        <tr>
+          <td colspan="2">
+            {{ personaje.descripcioncorta }}
+          </td>
+        </tr>
+
+        <tr>
+          <th colspan="2">
+            Stats
+          </th>
+        </tr>
+
+        <!-- VIDA / DAÑO -->
+        <tr>
+
+          <td>
+
+            <img
+              src="../../../assets/imagenes/consumibles/corazon vacio.png"
+              width="20">
+
+            Vida
+
+            <br>
+
+            <div class="hearts">
+
+              <img
+                *ngFor="let corazon of generarCorazones(personaje.vida)"
+                [src]="corazon"
+                width="20">
+
+            </div>
+
+          </td>
+
+          <td>
+
+            <img
+              src="../../../assets/imagenes/statsimg/danio.png"
+              width="20">
+
+            Daño
+
+            <br>
+
+            {{ personaje.danio }}
+
+          </td>
+
+        </tr>
+
+        <!-- LÁGRIMAS -->
+        <tr>
+
+          <td>
+
+            <img
+              src="../../../assets/imagenes/statsimg/lagrimas.png"
+              width="20">
+
+            Lágrimas
+
+            <br>
+
+            {{ personaje.lagrimas }}
+
+          </td>
+
+          <td>
+
+            <img
+              src="../../../assets/imagenes/statsimg/vel lagrima.png"
+              width="20">
+
+            Vel. Lágrimas
+
+            <br>
+
+            {{ personaje.vellagrimas }}
+
+          </td>
+
+        </tr>
+
+        <!-- RANGO -->
+        <tr>
+
+          <td>
+
+            <img
+              src="../../../assets/imagenes/statsimg/rango.png"
+              width="20">
+
+            Rango
+
+            <br>
+
+            {{ personaje.rango }}
+
+          </td>
+
+          <td>
+
+            <img
+              src="../../../assets/imagenes/statsimg/velocidad.png"
+              width="20">
+
+            Velocidad
+
+            <br>
+
+            {{ personaje.velocidad }}
+
+          </td>
+
+        </tr>
+
+        <!-- SUERTE -->
+        <tr>
+
+          <td colspan="2">
+
+            <img
+              src="../../../assets/imagenes/statsimg/suerte.png"
+              width="20">
+
+            Suerte
+
+            <br>
+
+            {{ personaje.suerte }}
+
+          </td>
+
+        </tr>
+
+        <!-- ITEMS -->
+        <tr>
+
+          <th colspan="2">
+            Items iniciales
+          </th>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <div class="consumibles">
+
+              <img
+                *ngFor="let c of generarConsumibles(personaje.consumibles || [])"
+                [src]="c"
+                width="20">
+
+            </div>
+
+          </td>
+
+          <td>
+
+            <img
+              *ngIf="personaje.objetos"
+              [src]="'../../../assets/imagenes/objetosimg/' + personaje.objetos + '.png'"
+              width="40">
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </div>
+
+    <!-- DESCRIPCIÓN -->
+    <div class="descripcion-larga">
+
+      {{ personaje.descripcionlarga }}
+
+    </div>
+
+  </div>
+
+</div>
