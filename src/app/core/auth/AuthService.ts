@@ -5,9 +5,14 @@ import { computed } from '@angular/core';
 export class AuthService {
 
   private API = "https://auth-api.jhoncasmen94.workers.dev";
-  private loggedIn = signal(false);
+  private loggedIn = signal(!!localStorage.getItem("token"));
 
   isLoggedIn = computed(() => this.loggedIn());
+
+    syncAuth() {
+      const token = localStorage.getItem("token");
+      this.loggedIn.set(!!token);
+    }
 
   setToken(token: string) {
     localStorage.setItem("token", token);
@@ -32,19 +37,19 @@ async login(email: string, pass: string) {
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      email: email,
-      pass: pass
-    })
+    body: JSON.stringify({ email, pass })
   });
 
   if (!res.ok) {
-    console.log(await res.text()); // 👈 importante
+    console.log(await res.text());
     return false;
   }
 
   const data = await res.json();
+
   localStorage.setItem("token", data.token);
+  this.loggedIn.set(true); // ⭐ IMPORTANTE
+
   return true;
 }
 
