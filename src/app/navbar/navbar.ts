@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { ModalSearchApi } from '../servicios-api/api/modal.search.api';
-import { AuthService } from '../core/auth/auth';
+import { AuthService } from '../core/auth/AuthService';
 
 @Component({
   selector: 'app-navbar',
