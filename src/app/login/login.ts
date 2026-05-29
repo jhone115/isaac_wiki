@@ -171,10 +171,17 @@ export class Login {
   private router = inject(Router);
   private route = inject(ActivatedRoute);
 
-  login() {
-    if (this.auth.login(this.user, this.pass)) {
-      const redirect = this.route.snapshot.queryParamMap.get('redirect') || '/';
+  async login() {
+    this.error = '';
+
+    const ok = await this.auth.login(this.user, this.pass);
+
+    if (ok) {
+      const redirect =
+        this.route.snapshot.queryParamMap.get('redirect') || '/';
+
       this.router.navigateByUrl(redirect, { replaceUrl: true });
+
     } else {
       this.error = 'Credenciales incorrectas';
     }

@@ -1,19 +1,25 @@
-// src/app/core/auth/auth.ts
 import { Injectable, signal } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
   private API = "http://127.0.0.1:8787";
+  private loggedIn = signal(false);
 
-  private loggedIn = signal<boolean>(false);
-
-  isLoggedIn(): boolean {
+  isLoggedIn() {
     return this.loggedIn();
   }
 
-  // 🧾 REGISTRO
-  async registrar(usuario: string, email: string, pass: string): Promise<Response> {
+  setToken(token: string) {
+    localStorage.setItem("token", token);
+    this.loggedIn.set(true);
+  }
+
+  getToken() {
+    return localStorage.getItem("token");
+  }
+
+  async register(usuario: string, email: string, pass: string) {
     return fetch(`${this.API}/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -21,25 +27,24 @@ export class AuthService {
     });
   }
 
-  // 🔐 LOGIN
-  async login(user: string, pass: string): Promise<boolean> {
+  async login(email: string, pass: string) {
     const res = await fetch(`${this.API}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ user, pass })
+      body: JSON.stringify({ email, pass })
     });
 
     if (!res.ok) return false;
 
     const data = await res.json();
 
-    this.loggedIn.set(true);
-    console.log("USER LOGGED:", data.user);
+    this.setToken(data.token);
 
     return true;
   }
 
-  logout(): void {
+  logout() {
     this.loggedIn.set(false);
+    localStorage.removeItem("token");
   }
 }

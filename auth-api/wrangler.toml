@@ -1,0 +1,11 @@
+name = "auth-api"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+[[d1_databases]]
+binding = "users_db"
+database_name = "users-db"
+database_id = "759dd4ea-7a71-4c1a-9573-16c2f0d71227"
+
+[vars]
+JWT_SECRET = "mi_super_secreto_123"
