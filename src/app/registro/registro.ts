@@ -53,6 +53,97 @@ import { RouterLink } from '@angular/router';
       </div>
     </div>
   `,
+   styles: [`
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      font-family: 'Press Start 2P', monospace;
+    }
+
+    .login-box {
+      background: rgba(0, 0, 0, 0.75);
+      border: 3px solid #8b3a3a;
+      box-shadow: 0 0 30px #8b3a3a88, inset 0 0 20px rgba(0,0,0,0.5);
+      border-radius: 4px;
+      padding: 50px 60px;
+      width: 520px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .login-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .login-header h2 {
+      color: #e8c97a;
+      font-size: 1.6rem;
+      letter-spacing: 4px;
+      margin: 0;
+    }
+
+    .skull { font-size: 1.3rem; }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      color: #a08060;
+      font-size: 0.7rem;
+    }
+
+    .form-group input {
+      background: rgba(20, 10, 10, 0.8);
+      border: 2px solid #5a2a2a;
+      border-radius: 3px;
+      color: #f0e0c0;
+      padding: 14px 16px;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.7rem;
+    }
+
+    .btn-entrar {
+      margin-top: 10px;
+      background: linear-gradient(180deg, #8b2020, #5a1010);
+      border: 2px solid #c04040;
+      color: #f0e0c0;
+      font-family: 'Press Start 2P', monospace;
+      padding: 16px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: #ff6060;
+      font-size: 0.6rem;
+      text-align: center;
+    }
+
+    .success {
+      color: #60ff90;
+      font-size: 0.6rem;
+      text-align: center;
+    }
+
+    .link-login {
+      text-align: center;
+      font-size: 0.6rem;
+      color: #a08060;
+    }
+
+    .link-login a {
+      color: #e8c97a;
+    }
+  `]
 })
 export class Registro {
 

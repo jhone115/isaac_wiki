@@ -17,8 +17,8 @@ import { RouterLink } from '@angular/router';
         </div>
 
         <div class="form-group">
-          <label>USUARIO</label>
-          <input [(ngModel)]="user" placeholder="Ingresa tu usuario" name="user" />
+          <label>EMAIL</label>
+          <input [(ngModel)]="email" placeholder="Ingresa tu email" name="email" />
         </div>
 
         <div class="form-group">
@@ -163,7 +163,7 @@ import { RouterLink } from '@angular/router';
   `,
 })
 export class Login {
-  user = '';
+  email = '';
   pass = '';
   error = '';
 
@@ -174,14 +174,13 @@ export class Login {
   async login() {
     this.error = '';
 
-    const ok = await this.auth.login(this.user, this.pass);
+    const ok = await this.auth.login(this.email, this.pass);
 
     if (ok) {
       const redirect =
         this.route.snapshot.queryParamMap.get('redirect') || '/';
 
       this.router.navigateByUrl(redirect, { replaceUrl: true });
-
     } else {
       this.error = 'Credenciales incorrectas';
     }

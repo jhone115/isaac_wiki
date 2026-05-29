@@ -1,48 +1,55 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { ModalSearchApi }from '../servicios-api/api/modal.search.api';
+import { ModalSearchApi } from '../servicios-api/api/modal.search.api';
+import { AuthService } from '../core/auth/auth';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [FormsModule, RouterLink], 
+  imports: [FormsModule, RouterLink],
   template: `
   <nav class="navbar navbar-expand-lg mynav">
-  <div class="container-fluid">
+    <div class="container-fluid">
 
-    <!-- Marca → lleva al inicio -->
-    <a class="navbar-brand mynav-brand" routerLink="/">
-      The Isaac of Wiki
-    </a>
-
-    <!-- Buscador + Login -->
-    <div class="collapse navbar-collapse mynav-nav">
-      <form class="d-flex" role="search" (submit)="buscar($event)">
-        
-        <input 
-          class="form-control me-2"
-          type="search"
-          placeholder="Buscar pisos, personajes, objetos..."
-          aria-label="Search"
-          [(ngModel)]="textoBusqueda"
-          name="busqueda"
-        />
-
-        <button class="btn btn-outline-success" type="submit">
-          Buscar
-        </button>
-
-      </form>
-
-      <!-- Botón login -->
-      <a routerLink="/login" class="btn btn-login ms-3">
-        Login
+      <a class="navbar-brand mynav-brand" routerLink="/">
+        The Isaac of Wiki
       </a>
 
-    </div>
+      <div class="collapse navbar-collapse mynav-nav">
 
-  </div>
-</nav>
+        <form class="d-flex" role="search" (submit)="buscar($event)">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Buscar pisos, personajes, objetos..."
+            [(ngModel)]="textoBusqueda"
+            name="busqueda"
+          />
+
+          <button class="btn btn-outline-success" type="submit">
+            Buscar
+          </button>
+        </form>
+
+        <!-- 🔐 LOGIN / USER AREA -->
+        @if (!auth.isLoggedIn()) {
+          <a routerLink="/login" class="btn btn-login ms-3">
+            Login
+          </a>
+        } @else {
+          <div class="user-area ms-3">
+            <span class="user-icon">👤</span>
+            <button class="btn btn-login" (click)="logout()">
+              Logout
+            </button>
+          </div>
+        }
+
+      </div>
+
+    </div>
+  </nav>
   `,
 styles: [`
 
@@ -398,22 +405,19 @@ styles: [`
 
 
 export class Navbar {
-  constructor(
-  private modalApi: ModalSearchApi
-) {}
-  textoBusqueda: string = '';
-  
-  
+
+  textoBusqueda = '';
+
+  private modalApi = inject(ModalSearchApi);
+  auth = inject(AuthService);
+
   buscar(event: Event) {
+    event.preventDefault();
+    if (!this.textoBusqueda.trim()) return;
+    this.modalApi.abrir(this.textoBusqueda);
+  }
 
-  event.preventDefault();
-
-  if (!this.textoBusqueda.trim())
-    return;
-
-  this.modalApi.abrir(
-    this.textoBusqueda
-  );
-
-}
+  logout() {
+    this.auth.logout();
+  }
 }

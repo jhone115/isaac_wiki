@@ -1,4 +1,5 @@
 import { Injectable, signal } from '@angular/core';
+import { computed } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -6,9 +7,7 @@ export class AuthService {
   private API = "https://auth-api.jhoncasmen94.workers.dev";
   private loggedIn = signal(false);
 
-  isLoggedIn() {
-    return this.loggedIn();
-  }
+  isLoggedIn = computed(() => this.loggedIn());
 
   setToken(token: string) {
     localStorage.setItem("token", token);
