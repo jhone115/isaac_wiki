@@ -26,21 +26,27 @@ export class AuthService {
     });
   }
 
-  async login(email: string, pass: string) {
-    const res = await fetch(`${this.API}/login`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, pass })
-    });
+async login(email: string, pass: string) {
+  const res = await fetch(`${this.API}/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email: email,
+      pass: pass
+    })
+  });
 
-    if (!res.ok) return false;
-
-    const data = await res.json();
-
-    this.setToken(data.token);
-
-    return true;
+  if (!res.ok) {
+    console.log(await res.text()); // 👈 importante
+    return false;
   }
+
+  const data = await res.json();
+  localStorage.setItem("token", data.token);
+  return true;
+}
 
   logout() {
     this.loggedIn.set(false);
