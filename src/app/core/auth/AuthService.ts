@@ -3,7 +3,7 @@ import { Injectable, signal } from '@angular/core';
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
-  private API = "http://127.0.0.1:8787";
+  private API = "https://auth-api.jhoncasmen94.workers.dev";
   private loggedIn = signal(false);
 
   isLoggedIn() {
